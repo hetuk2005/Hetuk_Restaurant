@@ -1,4 +1,3 @@
-/* #4c590 */
 * {
   margin: 0;
   padding: 0;
@@ -7,4 +6,134 @@
 
 body {
   background-color: #000;
+}
+
+.nav_parent p {
+  color: #fff;
+  font-size: 15px;
+}
+
+.nav_parent,
+.location_child,
+.time_child,
+.call_child,
+.mail_child,
+.nav_child1,
+.nav_child2,
+.nav_parent2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav_parent {
+  justify-content: space-between;
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.2);
+}
+
+.nav_parent img {
+  width: 17px;
+  height: 17px;
+  object-fit: cover;
+}
+
+.nav_child1,
+.nav_child2 {
+  padding: 21px 30px;
+  gap: 30px;
+}
+
+.seprator {
+  width: 9px;
+  height: 9px;
+  border: 1px solid hsl(38, 61%, 73%);
+  transform: rotate(45deg);
+}
+
+.location_child,
+.time_child,
+.call_child,
+.mail_child {
+  gap: 5px;
+}
+
+.nav_parent2 {
+  padding: 31px 21px;
+  justify-content: space-between;
+}
+
+.logo_child > img {
+  width: 165px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.list_nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+.list_nav ul li {
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  padding: 15px 21px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.dropdown_menu {
+  position: absolute;
+  top: 100%;
+  left: -11px;
+  width: 170px;
+  box-shadow: 0 4px 13px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  flex-direction: column;
+  gap: 0 !important;
+}
+
+.list_nav ul li {
+  width: 130px;
+  height: auto;
+  text-align: center;
+}
+
+.dropdown:hover .dropdown_menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown_menu li {
+  display: block;
+  padding: 15px;
+  background: hsl(38, 61%, 73%);
+  transition: 0.3s ease;
+}
+
+.dropdown_menu li:hover {
+  background: #000;
+  border: 1px solid #fff;
+}
+
+.nav_button > button {
+  padding: 15px 45px;
+  background-color: hsl(38, 61%, 73%);
+  border: 1px solid hsl(38, 61%, 73%);
+  font-weight: 550;
+  font-size: 15px;
+}
+
+.list_nav ul li:hover {
+  color: hsl(38, 61%, 73%);
 }
