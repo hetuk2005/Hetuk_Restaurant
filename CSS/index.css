@@ -39,7 +39,7 @@ body {
 
 .nav_child1,
 .nav_child2 {
-  padding: 21px 30px;
+  padding: 21px;
   gap: 30px;
 }
 
@@ -119,11 +119,13 @@ body {
   padding: 15px;
   background: hsl(38, 61%, 73%);
   transition: 0.3s ease;
+  color: #000 !important;
 }
 
 .dropdown_menu li:hover {
   background: #000;
-  border: 1px solid #fff;
+  color: hsl(38, 61%, 73%) !important;
+  border: 2px solid #f0f0f0;
 }
 
 .nav_button > button {
@@ -132,6 +134,33 @@ body {
   border: 1px solid hsl(38, 61%, 73%);
   font-weight: 550;
   font-size: 15px;
+  cursor: pointer;
+  position: relative;
+  color: #000;
+  z-index: 1;
+}
+
+.nav_button > button::after {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #000;
+  transition: all 0.3s ease;
+  z-index: -1;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.nav_button > button:hover::after {
+  height: 100%;
+  border-radius: 0;
+}
+
+.nav_button > button:hover {
+  color: #fff;
 }
 
 .list_nav ul li:hover {
