@@ -44,6 +44,8 @@
             <div class="nav_parent2">
                 <div class="logo_child">
                     <img src="./Utilies/Logo.svg" alt="Logo" class="logo_img">
+                    <img src="./Utilies/Menu.svg" alt="Menu" class="menu_img">
+
                 </div>
                 <div class="list_nav">
                     <ul>
@@ -66,5 +68,32 @@
                 </div>
             </div>
         </nav>
+        <div class="list_nav_none">
+            <ul>
+                <li>HOME</li>
+                <li class="dropdown_none">MENU <i
+                        class="fa fa-angle-down"></i>
+                    <ul class="dropdown_menu_none">
+                        <li>VEG</li>
+                        <li>NON-VEG</li>
+                    </ul>
+                </li>
+                <li>ABOUT US</li>
+                <li>CONTACT</li>
+            </ul>
+        </div>
     </body>
+    <script>
+        const menuIcon=document.querySelector(".menu_img");
+        const sideBar=document.querySelector(".list_nav_none");
+        const dropDown=document.querySelector(".dropdown_none")
+
+        menuIcon.addEventListener("click", ()=>{
+            sideBar.classList.toggle("active");
+        });
+
+        dropDown.addEventListener("click",()=>{
+            dropDown.classList.toggle("open");
+        });
+    </script>
 </html>
