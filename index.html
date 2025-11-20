@@ -69,6 +69,7 @@
             </div>
         </nav>
         <div class="list_nav_none">
+            <span class="close_btn">&times;</span>
             <ul>
                 <li>HOME</li>
                 <li class="dropdown_none">MENU <i
@@ -86,7 +87,8 @@
     <script>
         const menuIcon=document.querySelector(".menu_img");
         const sideBar=document.querySelector(".list_nav_none");
-        const dropDown=document.querySelector(".dropdown_none")
+        const dropDown=document.querySelector(".dropdown_none");
+        const closeBtn=document.querySelector(".close_btn");
 
         menuIcon.addEventListener("click", ()=>{
             sideBar.classList.toggle("active");
@@ -95,5 +97,9 @@
         dropDown.addEventListener("click",()=>{
             dropDown.classList.toggle("open");
         });
+
+        closeBtn.addEventListener("click",()=>{
+            sideBar.classList.remove("active");
+        })
     </script>
 </html>
