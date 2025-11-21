@@ -45,7 +45,6 @@
                 <div class="logo_child">
                     <img src="./Utilies/Logo.svg" alt="Logo" class="logo_img">
                     <img src="./Utilies/Menu.svg" alt="Menu" class="menu_img">
-
                 </div>
                 <div class="list_nav">
                     <ul>
@@ -65,11 +64,13 @@
                     <button class="default">
                         FIND A TABLE
                     </button>
+                    <img src="./Utilies/Menu.svg" alt="Menu" class="menu_img1">
                 </div>
             </div>
         </nav>
         <div class="list_nav_none">
-            <span class="close_btn">&times;</span>
+            <button class="close_btn">&times;</button>
+            <img src="./Utilies/Logo.svg" alt="Logo">
             <ul>
                 <li>HOME</li>
                 <li class="dropdown_none">MENU <i
@@ -86,11 +87,16 @@
     </body>
     <script>
         const menuIcon=document.querySelector(".menu_img");
+        const menuIcon1=document.querySelector(".menu_img1");
         const sideBar=document.querySelector(".list_nav_none");
         const dropDown=document.querySelector(".dropdown_none");
         const closeBtn=document.querySelector(".close_btn");
 
         menuIcon.addEventListener("click", ()=>{
+            sideBar.classList.toggle("active");
+        });
+
+        menuIcon1.addEventListener("click", ()=>{
             sideBar.classList.toggle("active");
         });
 
