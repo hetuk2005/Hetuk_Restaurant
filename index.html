@@ -11,101 +11,15 @@
     </head>
     <body>
         <!-- Navbar -->
-        <nav>
-            <div class="nav_parent">
-                <div class="nav_child1">
-                    <div class="location_child">
-                        <img src="./Utilies/Location.svg" alt="Location"
-                            class="location_img">
-                        <p class="loaction_text">Restaurant St, Delicious City,
-                            Mumbai, 401203, INDIA</p>
-                    </div>
-                    <div class="seprator"></div>
-                    <div class="time_child">
-                        <img src="./Utilies/Clock.svg" alt="Clock"
-                            class="time_img">
-                        <p class="time_text">Daily: 8:00 am to 10:00 pm</p>
-                    </div>
-                </div>
-                <div class="nav_child2">
-                    <div class="call_child">
-                        <img src="./Utilies/Call.svg" alt="Call"
-                            class="call_img">
-                        <p>+91 9876543210</p>
-                    </div>
-                    <div class="seprator"></div>
-                    <div class="mail_child">
-                        <img src="./Utilies/Mail.svg" alt="Mail"
-                            class="mail_img">
-                        <p>booking@restaurant.com</p>
-                    </div>
-                </div>
-            </div>
-            <div class="nav_parent2">
-                <div class="logo_child">
-                    <img src="./Utilies/Logo.svg" alt="Logo" class="logo_img">
-                    <img src="./Utilies/Menu.svg" alt="Menu" class="menu_img">
-                </div>
-                <div class="list_nav">
-                    <ul>
-                        <li>HOME</li>
-                        <li class="dropdown">MENU <i
-                                class="fa fa-angle-down"></i>
-                            <ul class="dropdown_menu">
-                                <li>VEG</li>
-                                <li>NON-VEG</li>
-                            </ul>
-                        </li>
-                        <li>ABOUT US</li>
-                        <li>CONTACT</li>
-                    </ul>
-                </div>
-                <div class="nav_button">
-                    <button class="default">
-                        FIND A TABLE
-                    </button>
-                    <img src="./Utilies/Menu.svg" alt="Menu" class="menu_img1">
-                </div>
-            </div>
-        </nav>
-        <div class="list_nav_none">
-            <button class="close_btn">&times;</button>
-            <img src="./Utilies/Logo.svg" alt="Logo">
-            <ul>
-                <li>HOME</li>
-                <li class="dropdown_none">MENU <i
-                        class="fa fa-angle-down"></i>
-                    <ul class="dropdown_menu_none">
-                        <li>VEG</li>
-                        <li>NON-VEG</li>
-                    </ul>
-                </li>
-                <li>ABOUT US</li>
-                <li>CONTACT</li>
-            </ul>
-        </div>
+        <nav></nav>
     </body>
-    <script>
-        const menuIcon=document.querySelector(".menu_img");
-        const menuIcon1=document.querySelector(".menu_img1");
-        const sideBar=document.querySelector(".list_nav_none");
-        const dropDown=document.querySelector(".dropdown_none");
-        const closeBtn=document.querySelector(".close_btn");
+    <script type="module">
+        import {navBar,navStyle} from "./JS/Components.js";
 
-        menuIcon.addEventListener("click", ()=>{
-            sideBar.classList.toggle("active");
-        });
+        document.querySelector("nav").innerHTML=navBar();
 
-        menuIcon1.addEventListener("click", ()=>{
-            sideBar.classList.toggle("active");
-        });
-
-        dropDown.addEventListener("click",()=>{
-            dropDown.classList.toggle("open");
-        });
-
-        closeBtn.addEventListener("click",()=>{
-            sideBar.classList.remove("active");
-        })
+        let styleTag=document.createElement("style");
+        styleTag.textContent=navStyle();
+        document.head.append(styleTag);
     </script>
 </html>
