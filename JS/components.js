@@ -78,16 +78,6 @@ export const navBar = () => {
 
 export const navStyle = () => {
   return `
-    * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #000;
-}
-
 .nav_parent p {
   color: #fff;
   font-size: 15px;
