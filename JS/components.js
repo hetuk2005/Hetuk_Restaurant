@@ -20,7 +20,7 @@ export const navBar = () => {
                     <div class="call_child">
                         <img src="./Utilies/Call.svg" alt="Call"
                             class="call_img">
-                        <p>+91 9876543210</p>
+                        <p>+91 9876543210</p> 
                     </div>
                     <div class="seprator"></div>
                     <div class="mail_child">
