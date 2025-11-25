@@ -36,7 +36,7 @@ function prevSlide() {
 function startTimer() {
   timer = setInterval(() => {
     nextSlide();
-  }, 4000);
+  }, 5000);
 }
 
 function resetTimer() {
