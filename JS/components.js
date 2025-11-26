@@ -85,7 +85,7 @@ color: #fff;
 }
 
 .call_child:hover .call_img,.mail_child:hover .mail_img,.call_child:hover p,.mail_child:hover p{
-  color: hsl(38, 61%, 73%);
+  color: var(--golden);
   cursor: pointer;
 }
 
@@ -128,7 +128,7 @@ color: #fff;
 .seprator {
   width: 9px;
   height: 9px;
-  border: 1px solid hsl(38, 61%, 73%);
+  border: 1px solid var(--golden);
   transform: rotate(45deg);
 }
 
@@ -205,7 +205,7 @@ color: #fff;
   left: 15%;
   width: 75%;
   height: 0.1em;
-  background-color: hsl(38, 61%, 73%);
+  background-color: var(--golden);
   opacity: 0;
   transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
   transform: scale(0);
@@ -237,7 +237,7 @@ color: #fff;
 .dropdown_menu_none li {
   display: block;
   padding: 15px;
-  background: hsl(38, 61%, 73%);
+  background: var(--golden);
   transition: 0.3s ease;
   color: #000 !important;
 }
@@ -245,14 +245,14 @@ color: #fff;
 .dropdown_menu li:hover,
 .dropdown_menu_none li:hover {
   background: #000;
-  color: hsl(38, 61%, 73%) !important;
+  color: var(--golden) !important;
   border: 2px solid #f0f0f0;
 }
 
 .nav_button > button {
   padding: 15px 45px;
-  background-color: hsl(38, 61%, 73%);
-  border: 1px solid hsl(38, 61%, 73%);
+  background-color: var(--golden);
+  border: 1px solid var(--golden);
   font-weight: 550;
   font-size: 15px;
   cursor: pointer;
@@ -285,7 +285,7 @@ color: #fff;
 }
 
 .list_nav ul li:hover {
-  color: hsl(38, 61%, 73%);
+  color: var(--golden);
 }
 
 @media (max-width: 430px) {
