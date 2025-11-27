@@ -10,8 +10,13 @@
             rel="stylesheet">
     </head>
     <body>
-        <!-- Navbar -->
 
+        <!-- Scroll_arrow -->
+        <a href="#" class="to-top">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+
+        <!-- Navbar -->
         <nav></nav>
 
         <!-- Slides -->
@@ -217,5 +222,17 @@
         let styleTag=document.createElement("style");
         styleTag.textContent=navStyle();
         document.head.append(styleTag);
+
+    //Scroll-Arrow-code
+const toTop = document.querySelector(".to-top");
+
+    window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 100) {
+            toTop.classList.add("active");
+        } else {
+            toTop.classList.remove("active");
+        }
+    });
+
     </script>
 </html>

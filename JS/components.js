@@ -288,6 +288,75 @@ color: #fff;
   color: var(--golden);
 }
 
+
+/*scroll arrow*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+.fas {
+  color: var(--golden);
+}
+
+.to-top {
+  background: #000;
+  position: fixed;
+  bottom: 16px;
+  right: 32px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: var(--golden) !important;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+  z-index: 100;
+}
+
+.to-top.active {
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
+}
+.to-top::after {
+  content: "Back to Top";
+  position: absolute;
+  bottom: 57px;
+  right: -17px;
+  background: var(--golden);
+  color: #000;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.to-top:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*Custom scrollbar*/
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background-color: #000;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--golden);
+  border-radius: 10px;
+}
+
 @media (max-width: 430px) {
   .nav_parent,
   .list_nav,
