@@ -79,7 +79,8 @@ nav {
   margin-top: 21px;
 }
 
-.slider_content a button {
+.slider_content a button,
+.about_content button {
   cursor: pointer;
   display: block;
   padding: 13px 45px;
@@ -97,7 +98,8 @@ nav {
   font-weight: 600;
 }
 
-.slider_content a button::after {
+.slider_content a button::after,
+.about_content button::after {
   content: "";
   position: absolute;
   height: 0;
@@ -111,12 +113,14 @@ nav {
   border-bottom-right-radius: 50%;
 }
 
-.slider_content a button:hover::after {
+.slider_content a button:hover::after,
+.about_content button:hover::after {
   height: 100%;
   border-radius: 0;
 }
 
-.slider_content a button:hover {
+.slider_content a button:hover,
+.about_content button:hover {
   color: #000;
 }
 
@@ -164,7 +168,8 @@ nav {
 }
 
 .slider_div img,
-.flavour_div img {
+.flavour_div img,
+.about_content img {
   width: 100px;
   display: block;
   margin: 21px auto;
@@ -296,24 +301,36 @@ nav {
   z-index: 15;
 }
 
-figure {
+.breakfast_parent,
+.drinks_parent,
+.appetizers_parent {
   z-index: 100;
   position: relative;
 }
 
-figure,
-figure > img {
+.breakfast_parent,
+.drinks_parent,
+.appetizers_parent,
+.breakfast_parent > img,
+.drinks_parent > img,
+.appetizers_parent > img {
   width: 285px;
   height: 337px;
   transition: all 0.5s ease-in-out;
 }
 
-figure > img {
+.breakfast_parent > img,
+.drinks_parent > img,
+.appetizers_parent > img {
   object-fit: contain;
 }
 
-figure::before,
-figure::after {
+.breakfast_parent::before,
+.drinks_paren::before,
+.appetizers_parent::before,
+.breakfast_parent::after,
+.drinks_parent::after,
+.appetizers_parent::after {
   content: "";
   height: 100%;
   width: 141px;
@@ -330,11 +347,15 @@ figure::after {
   will-change: transform;
 }
 
-figure::before {
+.breakfast_parent::before,
+.drinks_parent::before,
+.appetizers_parent::before {
   top: -40px;
 }
 
-figure::after {
+.breakfast_parent::after,
+.drinks_parent::after,
+.appetizers_parent::after {
   bottom: -40px;
 }
 
@@ -342,15 +363,21 @@ figure::after {
   perspective: 1000px;
 }
 
-.service_card:hover figure img {
+.service_card:hover .breakfast_parent img,
+.service_card:hover .drinks_parent img,
+.service_card:hover .appetizers_parent img {
   transform: scale(1.07);
 }
 
-.service_card:hover figure::before {
+.service_card:hover .breakfast_parent::before,
+.service_card:hover .drinks_parent::before,
+.service_card:hover .appetizers_parent::before {
   transform: translateX(-50%) rotateY(180deg);
 }
 
-.service_card:hover figure::after {
+.service_card:hover .breakfast_parent::after,
+.service_card:hover .drinks_parent::after,
+.service_card:hover .appetizers_parent::after {
   transform: translateX(-50%) rotateY(180deg);
 }
 
@@ -388,3 +415,173 @@ figure::after {
   width: 35% !important;
 }
 
+.about_parent {
+  height: 141vh;
+  background-color: #161719;
+  padding-block: 170px 0;
+}
+
+.flex_container {
+  position: relative;
+  display: flex;
+  gap: 71px;
+  justify-content: center;
+  margin: auto;
+}
+
+.about_img4 {
+  position: absolute;
+  top: 27%;
+  left: 0;
+  width: 197px;
+  height: 197px;
+}
+
+.about_content {
+  padding-right: 90px;
+  padding-top: 31px;
+  color: #fff;
+}
+
+.story {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--golden);
+  font-size: smaller;
+  letter-spacing: 2.5px;
+  font-weight: 700;
+}
+
+.about_content h2 {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 57px;
+  font-weight: 500;
+}
+
+.about_para {
+  text-align: center;
+  line-height: 27px;
+  letter-spacing: 1px;
+  margin: 15px 0;
+  font-size: 17px;
+}
+
+.about_label {
+  text-align: center;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 15px;
+}
+
+.number {
+  cursor: pointer;
+  font-size: 27px;
+  font-weight: 600;
+  color: var(--golden);
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.about_content button {
+  margin: 31px auto;
+  padding: 13px 45px;
+}
+
+.about_content button a {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.about_banner {
+  position: relative;
+  margin-bottom: 120px;
+  transition: all 0.3s ease-in-out;
+}
+
+.about_banner img {
+  width: 570px;
+  height: 570px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  z-index: 8;
+}
+
+.about_banner img:hover,
+.about_abs_img img:hover,
+.about_banner:hover {
+  transform: scale(1.03);
+}
+
+.about_abs_img {
+  padding: 50px 0;
+}
+
+.about_abs_img {
+  bottom: 260px;
+  left: -100px;
+  width: 401px;
+  height: 401px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 5;
+}
+
+.about_abs_img img {
+  width: 285px;
+  height: 285px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 10;
+}
+
+.about_abs_img::before {
+  content: "";
+  position: absolute;
+  /* top: -41px;
+  bottom: -41px; */
+  top: 0;
+  height: 401px;
+  left: 37%;
+  background-image: url(../Utilies/img-pattern.svg);
+  background-repeat: repeat;
+  width: 141px;
+  transform: translateX(-50%);
+  z-index: 9;
+}
+
+.about_badge {
+  position: absolute;
+  top: -65px;
+  right: 0;
+  cursor: pointer;
+}
+
+.about_badge::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(../Utilies/badge-2-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 10;
+  animation: rotate360 15s linear infinite;
+}
+
+@keyframes rotate360 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.about_badge img {
+  width: 133px;
+  height: 135px;
+}
