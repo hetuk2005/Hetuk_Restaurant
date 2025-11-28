@@ -449,6 +449,7 @@ nav {
 }
 
 .story,
+.delicious_title,
 .special_title {
   text-align: center;
   text-transform: uppercase;
@@ -691,4 +692,14 @@ nav {
 .delicious_menu {
   background-color: #161719;
   height: 100vh;
+  padding: 100px 0;
+}
+
+.delicious_menu h2 {
+  color: #fff;
+  font-weight: normal;
+  font-size: 47px;
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 31px 0;
 }
