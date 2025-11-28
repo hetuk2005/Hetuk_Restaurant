@@ -296,21 +296,21 @@ html {
 }
 
 .fas {
-  color: var(--golden);
+  color: #000;
 }
 
 .to-top {
-  background: #000;
+  background: var(--golden);
   position: fixed;
-  bottom: 16px;
-  right: 32px;
+  bottom: 13px;
+  right: 33px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 32px;
+  font-size: 25px;
   color: var(--golden) !important;
   text-decoration: none;
   opacity: 0;
@@ -328,12 +328,13 @@ html {
   content: "Back to Top";
   position: absolute;
   bottom: 57px;
-  right: -17px;
+  right: -11px;
   background: var(--golden);
   color: #000;
-  padding: 4px 8px;
-  font-size: 12px;
-  border-radius: 4px;
+  padding: 5px 9px;
+  font-size: 13px;
+  border-radius: 5px;
+  font-weight: 600;
   opacity: 0;
   transform: translateY(5px);
   transition: all 0.3s ease;
