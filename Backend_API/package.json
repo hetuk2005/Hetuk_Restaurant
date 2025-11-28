@@ -1,7 +1,7 @@
 {
   "name": "hetuk_restaurant",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
@@ -18,8 +18,10 @@
   "homepage": "https://github.com/hetuk2005/Hetuk_Restaurant#readme",
   "description": "",
   "dependencies": {
-    "json-server": "^0.17.4     ",
-    "json-server-auth": "^2.1.0",
-    "start": "nodemon server.js"
+    "json-server": "^0.17.4",
+    "json-server-auth": "^2.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
   }
 }
