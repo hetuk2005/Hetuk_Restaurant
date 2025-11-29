@@ -51,3 +51,36 @@ prevBtn.addEventListener("click", prevSlide);
 //Start Slider
 showSlide(index);
 startTimer();
+
+// API Fetching
+let API = "https://hetuk-restaurant.onrender.com/menu";
+
+const apiCall = () => {
+  fetch(API)
+    .then((res) => res.json())
+    .catch((err) => console.log("Error: ", err));
+};
+
+const appendData = (data) => {
+  const dataShow = document.querySelector(".delicious_div");
+
+  let product = data.slice(3, 7);
+
+  const imageContainer = document.createElement("div");
+  imageContainer.className = "imageContainer";
+
+  for (let i = 3; i <= 6 && i < data.length; i++) {
+    let item = data[i];
+
+    imageContainer.innerHTML = `
+            <div class="delicious_child">
+                <img src alt>
+            </div>
+            <div class="delicious_child2">
+                <h6 class="title"></h6>
+                <h6 class="price"></h6>
+                <p class="description"></p>
+            </div>
+    `;
+  }
+};
