@@ -58,29 +58,32 @@ let API = "https://hetuk-restaurant.onrender.com/menu";
 const apiCall = () => {
   fetch(API)
     .then((res) => res.json())
+    .then((data) => {
+      appendData(data);
+    })
     .catch((err) => console.log("Error: ", err));
 };
 
 const appendData = (data) => {
   const dataShow = document.querySelector(".delicious_div");
 
-  let product = data.slice(3, 7);
-
   const imageContainer = document.createElement("div");
   imageContainer.className = "imageContainer";
 
-  for (let i = 3; i <= 6 && i < data.length; i++) {
-    let item = data[i];
-
-    imageContainer.innerHTML = `
+  imageContainer.innerHTML = data.map((el) => {
+    return `
             <div class="delicious_child">
-                <img src alt>
+                <img src=${el.img} alt="Menu Image" class="menu_img">
             </div>
             <div class="delicious_child2">
-                <h6 class="title"></h6>
-                <h6 class="price"></h6>
-                <p class="description"></p>
+                <h4 class="title">${el.title}</h4>
+                <h6 class="price">${el.price}</h6>
+                <p class="description">${el.description}</p>
             </div>
     `;
-  }
+  });
+
+  dataShow.append(imageContainer);
 };
+
+apiCall();

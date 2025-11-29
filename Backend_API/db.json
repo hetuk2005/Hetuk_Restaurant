@@ -2,7 +2,7 @@
   "menu": [
     {
       "id": 1,
-      "img": "https://github.com/hetuk2005/Hetuk_Restaurant/blob/main/Utilies/menu-1.png",
+      "img": "https://raw.githubusercontent.com/hetuk2005/Hetuk_Restaurant/main/Utilies/menu-1.png",
       "title": "Greek Salad",
       "description": "Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.",
       "category": "Veg",
@@ -10,7 +10,7 @@
     },
     {
       "id": 2,
-      "img": "https://github.com/hetuk2005/Hetuk_Restaurant/blob/main/Utilies/menu-3.png",
+      "img": "https://raw.githubusercontent.com/hetuk2005/Hetuk_Restaurant/main/Utilies/menu-3.png",
       "title": "Butternut Pumpkin",
       "description": "Typesetting industry lorem Lorem Ipsum is simply dummy text of the priand.",
       "category": "Veg",
@@ -18,7 +18,7 @@
     },
     {
       "id": 3,
-      "img": "https://github.com/hetuk2005/Hetuk_Restaurant/blob/main/Utilies/Pav-Bhaji.jpg",
+      "img": "https://raw.githubusercontent.com/hetuk2005/Hetuk_Restaurant/main/Utilies/Pav-Bhaji.jpg",
       "title": "Pav Bhaji",
       "description": "Spiced vegetable mash with buttered pav and fresh herbs.",
       "category": "Veg",
@@ -26,7 +26,7 @@
     },
     {
       "id": 4,
-      "img": "https://github.com/hetuk2005/Hetuk_Restaurant/blob/main/Utilies/menu-2.png",
+      "img": "https://raw.githubusercontent.com/hetuk2005/Hetuk_Restaurant/main/Utilies/menu-2.png",
       "title": "Lasagne",
       "description": "Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices",
       "category": "Non-Veg",
@@ -34,7 +34,7 @@
     },
     {
       "id": 5,
-      "img": "https://github.com/hetuk2005/Hetuk_Restaurant/blob/main/Utilies/menu-4.png",
+      "img": "https://raw.githubusercontent.com/hetuk2005/Hetuk_Restaurant/main/Utilies/menu-4.png",
       "title": "Tokusen Wagyu",
       "description": "Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.",
       "category": "Non-Veg",
@@ -42,7 +42,7 @@
     },
     {
       "id": 6,
-      "img": "https://github.com/hetuk2005/Hetuk_Restaurant/blob/main/Utilies/menu-6.png",
+      "img": "https://raw.githubusercontent.com/hetuk2005/Hetuk_Restaurant/main/Utilies/menu-6.png",
       "title": "Opu Fish",
       "description": "Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices",
       "category": "Non-Veg",
