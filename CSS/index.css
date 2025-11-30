@@ -703,3 +703,27 @@ nav {
   text-align: center;
   margin: 31px 0;
 }
+
+.delicious_div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 31px;
+  align-content: center;
+}
+
+.imageContainer {
+  display: grid;
+  /* grid-template-columns: repeat(2, 1fr); */
+  /* gap: 21px; */
+}
+
+.items_img {
+  width: 100px;
+  height: 100px;
+}
+
+.delicious_child2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -67,23 +67,23 @@ const apiCall = () => {
 const appendData = (data) => {
   const dataShow = document.querySelector(".delicious_div");
 
-  const imageContainer = document.createElement("div");
-  imageContainer.className = "imageContainer";
+  data.map((el) => {
+    const imageContainer = document.createElement("div");
+    imageContainer.className = "imageContainer";
 
-  imageContainer.innerHTML = data.map((el) => {
-    return `
+    imageContainer.innerHTML = `
             <div class="delicious_child">
-                <img src=${el.img} alt="Menu Image" class="menu_img">
+                <img src="${el.img}" alt="Menu Image" class="items_img">
             </div>
             <div class="delicious_child2">
                 <h4 class="title">${el.title}</h4>
                 <h6 class="price">${el.price}</h6>
-                <p class="description">${el.description}</p>
             </div>
+            <p class="description">${el.description}</p>
     `;
-  });
 
-  dataShow.append(imageContainer);
+    dataShow.append(imageContainer);
+  });
 };
 
 apiCall();
