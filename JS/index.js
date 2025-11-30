@@ -86,4 +86,16 @@ const appendData = (data) => {
   });
 };
 
-apiCall();
+// Loader
+window.addEventListener("DOMContentLoaded", function () {
+  const loader = this.document.querySelector("#loader");
+  if (loader) {
+    loader.style.display = "none";
+  }
+});
+
+apiCall().finally(() => {
+  setTimeout(() => {
+    loader.classList.add("fade_out");
+  }, 1500);
+});
