@@ -709,21 +709,45 @@ nav {
   grid-template-columns: repeat(2, 1fr);
   gap: 31px;
   align-content: center;
+  padding-left: 170px;
+  position: relative;
+}
+
+.delicious_div::after {
+  content: "";
+  position: absolute;
+  left: 49.5%;
+  transform: translateX(-49.5%);
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background-color: var(--golden);
+  opacity: 0.7;
 }
 
 .imageContainer {
-  display: grid;
-  /* grid-template-columns: repeat(2, 1fr); */
-  /* gap: 21px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 21px;
 }
 
 .items_img {
   width: 100px;
   height: 100px;
+  border-radius: 21px;
 }
 
 .delicious_child2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.title,
+.description {
+  color: #fff;
+}
+
+.description {
+  opacity: 0.5;
 }

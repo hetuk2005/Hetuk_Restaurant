@@ -78,8 +78,8 @@ const appendData = (data) => {
             <div class="delicious_child2">
                 <h4 class="title">${el.title}</h4>
                 <h6 class="price">${el.price}</h6>
-            </div>
             <p class="description">${el.description}</p>
+            </div>
     `;
 
     dataShow.append(imageContainer);
