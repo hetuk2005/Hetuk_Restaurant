@@ -56,7 +56,7 @@ startTimer();
 let API = "https://hetuk-restaurant.onrender.com/menu";
 
 const apiCall = () => {
-  fetch(API)
+  return fetch(API)
     .then((res) => res.json())
     .then((data) => {
       appendData(data);
