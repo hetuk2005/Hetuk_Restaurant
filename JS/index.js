@@ -73,7 +73,7 @@ const appendData = (data) => {
 
     imageContainer.innerHTML = `
             <div class="delicious_child">
-                <img src="${el.img}" alt="Menu Image" class="items_img">
+                <img src="${el.img}" alt="Menu Image" class="items_img" loading="lazy">
             </div>
             <div class="delicious_child2">
                 <h4 class="title">${el.title}</h4>

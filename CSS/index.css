@@ -813,6 +813,8 @@ nav {
   width: 100px;
   height: 100px;
   border-radius: 21px;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
 }
 
 .delicious_child2 {
@@ -842,6 +844,11 @@ nav {
   color: var(--golden);
   text-transform: lowercase;
   transition: all 0.3s ease-in-out;
+}
+
+.items_img:hover {
+  opacity: 0.7;
+  transform: scale(1.05);
 }
 
 .color:hover {
