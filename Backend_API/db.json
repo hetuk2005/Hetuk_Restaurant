@@ -47,6 +47,118 @@
       "description": "Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices",
       "category": "Non-Veg",
       "price": "750"
+    },
+    {
+      "id": 7,
+      "img": "",
+      "title": "Olivas Rellenas",
+      "description": "Avocados with crab meat, red onion, crab salad stuffed red bell pepper and green bell pepper.",
+      "category": "Non-Veg",
+      "price": "650"
+    },
+    {
+      "id": 8,
+      "img": "",
+      "title": "Truffle Mushroom Risotto",
+      "description": "Creamy arborio rice cooked with wild mushrooms and truffle.",
+      "category": "Veg",
+      "price": "540"
+    },
+    {
+      "id": 9,
+      "img": "",
+      "title": "Spinach & Ricotta Ravioli",
+      "description": "Handmade ravioli filled with ricotta and spinach in a light sauce.",
+      "category": "Veg",
+      "price": "520"
+    },
+    {
+      "id": 10,
+      "img": "",
+      "title": "Charcoal-Grilled Paneer Steak",
+      "description": "Smoky grilled paneer served with herb butter and greens.",
+      "category": "Veg",
+      "price": "480"
+    },
+    {
+      "id": 11,
+      "img": "",
+      "title": "Roasted Vegetable Skewers",
+      "description": "Grilled peppers, zucchini, onions, and tomatoes with herbs.",
+      "category": "Veg",
+      "price": "390"
+    },
+    {
+      "id": 12,
+      "img": "",
+      "title": "Creamy Pesto Gnocchi",
+      "description": "Soft potato gnocchi tossed in basil pesto cream.",
+      "category": "Veg",
+      "price": "510"
+    },
+    {
+      "id": 13,
+      "img": "",
+      "title": "Burrata Caprese Plate",
+      "description": "Fresh burrata served with tomatoes, basil, and olive oil.",
+      "category": "Veg",
+      "price": "560"
+    },
+    {
+      "id": 14,
+      "img": "",
+      "title": "Herb-Roasted Cauliflower Steak",
+      "description": "Thick-cut cauliflower roasted with garlic and herbs.",
+      "category": "Veg",
+      "price": "450"
+    },
+    {
+      "id": 15,
+      "img": "",
+      "title": "Grilled Lemon Butter Chicken",
+      "description": "Tender chicken grilled with lemon butter glaze.",
+      "category": "Non-Veg",
+      "price": "620"
+    },
+    {
+      "id": 16,
+      "img": "",
+      "title": "Garlic Herb Prawns",
+      "description": "Juicy prawns sautéed in garlic herb butter.",
+      "category": "Non-Veg",
+      "price": "740"
+    },
+    {
+      "id": 17,
+      "img": "",
+      "title": "Smoked Chicken Alfredo",
+      "description": "Creamy alfredo pasta tossed with smoked chicken.",
+      "category": "Non-Veg",
+      "price": "690"
+    },
+    {
+      "id": 18,
+      "img": "",
+      "title": "Grilled Salmon Fillet",
+      "description": "Salmon served with citrus butter and herbs.",
+      "category": "Non-Veg",
+      "price": "960"
+    },
+    {
+      "id": 19,
+      "img": "",
+      "title": "Chicken Peri Peri Skewers",
+      "description": "Spicy flame-grilled chicken skewers with herbs.",
+      "category": "Non-Veg",
+      "price": "580"
+    },
+    {
+      "id": 20,
+      "img": "",
+      "title": "Lobster Tortellini",
+      "description": "Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.",
+      "category": "Non-Veg",
+      "price": "580"
     }
   ]
 }
