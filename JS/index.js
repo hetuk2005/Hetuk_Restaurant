@@ -67,7 +67,7 @@ const apiCall = () => {
 const appendData = (data) => {
   const dataShow = document.querySelector(".delicious_div");
 
-  data.map((el) => {
+  data.slice(0, 6).map((el) => {
     const imageContainer = document.createElement("div");
     imageContainer.className = "imageContainer";
 
@@ -77,7 +77,7 @@ const appendData = (data) => {
             </div>
             <div class="delicious_child2">
                 <h4 class="title">${el.title}</h4>
-                <h6 class="price">${el.price}</h6>
+                <h6 class="price">₹${el.price}</h6>
             <p class="description">${el.description}</p>
             </div>
     `;
