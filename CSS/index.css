@@ -854,3 +854,75 @@ nav {
 .color:hover {
   text-decoration: underline;
 }
+
+.registration {
+  background: url(../Utilies/testimonial-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px 0 340px;
+}
+
+.reg_container {
+  color: #fff;
+  text-align: center;
+  line-height: 67px;
+  font-size: 45px;
+  font-weight: 500;
+}
+
+.reg_description {
+  letter-spacing: 2px;
+}
+
+.quote {
+  font-weight: bolder !important;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  padding: 51px 0;
+}
+
+.square {
+  width: 9px;
+  height: 9px;
+  border: 1.5px solid var(--golden);
+  transform: rotate(45deg);
+  animation: square360 15s linear infinite;
+  transition: all 0.3s ease-in-out;
+}
+
+@keyframes square360 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.square:hover {
+  animation-play-state: paused;
+}
+
+.user img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  border: none;
+}
+
+.user_title {
+  text-align: center;
+  font-size: 17px;
+  letter-spacing: 2px;
+  color: var(--golden);
+  font-weight: 700;
+}
