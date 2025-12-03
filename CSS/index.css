@@ -859,7 +859,7 @@ nav {
   background: url(../Utilies/testimonial-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 100px 0 340px;
+  padding: 100px 0;
 }
 
 .reg_container {
@@ -925,4 +925,35 @@ nav {
   letter-spacing: 2px;
   color: var(--golden);
   font-weight: 700;
+}
+
+.reservation {
+  display: flex;
+  justify-content: center;
+}
+
+.reservation_child1 {
+  background-color: #000;
+  color: #fff;
+  padding: 75px 61px;
+  text-align: center;
+}
+
+.reservation_child2 {
+  background: url(../Utilies/form-pattern.png);
+  background-color: #000;
+  color: #fff;
+  padding: 51px;
+  height: 67vh;
+}
+
+form {
+  padding: 41px;
+}
+
+.flex_form1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 21px;
 }
