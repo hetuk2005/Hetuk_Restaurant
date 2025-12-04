@@ -860,6 +860,7 @@ nav {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 100px 0;
+  height: 120vh;
 }
 
 .reg_container {
@@ -930,30 +931,53 @@ nav {
 .reservation {
   display: flex;
   justify-content: center;
+  background-color: #161719;
 }
 
 .reservation_child1 {
   background-color: #000;
   color: #fff;
+  /* position: relative;
+  top: -50px; */
   padding: 75px 61px;
   text-align: center;
+  height: 67vh;
 }
 
 .reservation_child2 {
   background: url(../Utilies/form-pattern.png);
-  background-color: #000;
   color: #fff;
   padding: 51px;
   height: 67vh;
 }
 
 form {
-  padding: 41px;
+  padding: 41px 0;
 }
 
-.flex_form1 {
+.flex_form input {
+  height: 51px;
+  padding: 11px 21px;
+  border: 1px solid hsla(0, 0%, 100%, 0.1);
+  background-color: hsla(210, 4%, 11%, 1);
+}
+
+.flex_form input::placeholder {
+  color: #fff;
+  font-size: medium;
+}
+
+.flex_form1,
+.flex_form {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 21px;
+}
+
+#message {
+  width: 100%;
+  height: 141px;
+  resize: none;
+  padding: 21px;
 }
