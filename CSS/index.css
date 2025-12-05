@@ -142,7 +142,8 @@ nav {
 .slider_content a button,
 .about_content button,
 .special_container button,
-.delicious_menu button {
+.delicious_menu button,
+.submit_btn {
   text-transform: uppercase;
   cursor: pointer;
   display: block;
@@ -164,7 +165,8 @@ nav {
 .slider_content a button::after,
 .about_content button::after,
 .special_container button::after,
-.delicious_menu button::after {
+.delicious_menu button::after,
+.submit_btn::after {
   content: "";
   position: absolute;
   height: 0;
@@ -181,7 +183,8 @@ nav {
 .slider_content a button:hover::after,
 .about_content button:hover::after,
 .special_container button:hover::after,
-.delicious_menu button:hover::after {
+.delicious_menu button:hover::after,
+.submit_btn.book_table:hover::after {
   height: 100%;
   border-radius: 0;
 }
@@ -189,7 +192,8 @@ nav {
 .slider_content a button:hover,
 .about_content button:hover,
 .special_container button:hover,
-.delicious_menu button:hover {
+.delicious_menu button:hover,
+.submit_btn:hover {
   color: #000;
 }
 
@@ -575,7 +579,8 @@ nav {
 
 .about_content button a,
 .special_container button a,
-.delicious_menu button a {
+.delicious_menu button a,
+.submit_btn a {
   font-size: 15px;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -941,14 +946,14 @@ nav {
   top: -50px; */
   padding: 75px 61px;
   text-align: center;
-  height: 67vh;
+  height: 77vh;
 }
 
 .reservation_child2 {
   background: url(../Utilies/form-pattern.png);
   color: #fff;
   padding: 51px;
-  height: 67vh;
+  height: 77vh;
 }
 
 form {
@@ -960,6 +965,7 @@ form {
   padding: 11px 21px;
   border: 1px solid hsla(0, 0%, 100%, 0.1);
   background-color: hsla(210, 4%, 11%, 1);
+  color: #fff;
 }
 
 .flex_form input::placeholder {
@@ -977,7 +983,71 @@ form {
 
 #message {
   width: 100%;
-  height: 141px;
+  height: 141px !important;
   resize: none;
   padding: 21px;
+  text-align: left !important;
 }
+
+#message::placeholder {
+  color: #fff;
+}
+
+.icon_wrapper,
+.icon_wrapper1 {
+  position: relative;
+  width: 100%;
+  background-color: hsla(210, 4%, 11%, 1);
+  border: 1px solid hsla(0, 0%, 100%, 0.1);
+  padding: 11px 19px;
+}
+
+.icon_wrapper1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bi-person,
+.bi-calendar,
+.bi-clock {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 17px;
+  padding-top: 5px;
+}
+
+.person,
+#date,
+.time,
+#message {
+  background-color: hsla(210, 4%, 11%, 1);
+  color: #fff;
+  height: 41px;
+  font-size: 17px;
+  border: 1px solid hsla(210, 4%, 11%, 1);
+  padding: 11px 21px;
+  cursor: pointer;
+  text-align: center;
+}
+
+#date {
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+#date::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.reservation_child2 {
+  text-align: center;
+}
+
