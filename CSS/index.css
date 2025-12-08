@@ -148,7 +148,8 @@ nav {
 .slider_content a button,
 .about_content button,
 .special_container button,
-.delicious_menu button {
+.delicious_menu button,
+.event button {
   text-transform: uppercase;
   cursor: pointer;
   display: block;
@@ -170,7 +171,8 @@ nav {
 .slider_content a button::after,
 .about_content button::after,
 .special_container button::after,
-.delicious_menu button::after {
+.delicious_menu button::after,
+.event button::after {
   content: "";
   position: absolute;
   height: 0;
@@ -188,7 +190,8 @@ nav {
 .about_content button:hover::after,
 .special_container button:hover::after,
 .delicious_menu button:hover::after,
-.book_table:hover::after {
+.book_table:hover::after,
+.event button:hover::after {
   height: 100%;
   border-radius: 0;
 }
@@ -196,7 +199,8 @@ nav {
 .slider_content a button:hover,
 .about_content button:hover,
 .special_container button:hover,
-.delicious_menu button:hover {
+.delicious_menu button:hover,
+.event button:hover {
   color: #000;
 }
 
@@ -1305,3 +1309,122 @@ form {
   bottom: 51px;
   left: 0;
 }
+
+/* Upcoming Event */
+
+.event {
+  background-color: #0e0d0b;
+  padding: 31px 0;
+  color: #fff;
+  height: 121vh;
+}
+
+.event h2 {
+  text-align: center;
+  font-size: 51px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.event_parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 31px;
+  margin: 31px 0;
+}
+
+.event_card {
+  overflow: hidden;
+  width: 350px;
+  height: 450px;
+  position: relative;
+}
+
+.event_card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 50%;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    transparent,
+    rgba(225, 225, 225, 0.5),
+    transparent
+  );
+  transform: skewX(-21deg);
+  transition: all 0.9s ease-in-out;
+  z-index: 5;
+  animation: none;
+}
+
+.event_card:hover::after {
+  transform: skewX(-21deg) translateX(550%);
+  animation: shine 0.9s ease-in-out forwards;
+}
+
+@keyframes shine {
+  0% {
+    transform: skewX(-21deg) translateX(150%);
+  }
+  100% {
+    transform: scaleX(-21deg) translateX(550%);
+  }
+}
+
+.event_card img {
+  object-fit: contain;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.event_card:hover img {
+  scale: 1.03;
+}
+
+.event_content {
+  position: absolute;
+  bottom: 0;
+  z-index: 5;
+  text-align: center;
+  width: 100%;
+  padding: 15px 25px;
+}
+
+.event_time {
+  background-color: #000;
+  padding: 5px 11px;
+  font-size: 17px;
+  color: var(--golden);
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  position: absolute;
+  top: 23px;
+  left: 17px;
+  z-index: 5;
+}
+
+.event_text {
+  color: var(--golden);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.event_content h6 {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.event button {
+  margin: 51px auto;
+  padding: 21px;
+}
+
+/* Footer */
