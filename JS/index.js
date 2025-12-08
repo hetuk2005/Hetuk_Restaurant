@@ -52,25 +52,50 @@ prevBtn.addEventListener("click", prevSlide);
 showSlide(index);
 startTimer();
 
+// Skeleton Loading
+
+function skeletonLoading() {
+  const container = document.querySelector(".delicious_div");
+  container.innerHTML = "";
+
+  for (let i = 0; i < 6; i++) {
+    const skeletonDiv = document.createElement("div");
+    skeletonDiv.className = "imageContainer";
+
+    skeletonDiv.innerHTML = `
+    <div class="skeleton_flex">
+      <div class="delicious_child">
+        <div class="skeleton skeleton_img"></div>
+      </div>
+      <div class="delicious_child2">
+        <div class="skeleton skeleton_title"></div>
+        <div class="skeleton skeleton_price"></div>
+        <div class="skeleton skeleton_text"></div>
+      </div>
+    </div>
+    `;
+
+    container.append(skeletonDiv);
+  }
+}
+
 // API Fetching
 let API = "https://hetuk-restaurant.onrender.com/menu";
-const loader = document.querySelector("#loader");
 
 const apiCall = () => {
-  loader.style.display = "block";
+  skeletonLoading();
+
   fetch(API)
     .then((res) => res.json())
     .then((data) => {
       appendData(data);
     })
-    .catch((err) => console.log("Error: ", err))
-    .finally(() => {
-      loader.style.display = "none";
-    });
+    .catch((err) => console.log("Error: ", err));
 };
 
 const appendData = (data) => {
   const dataShow = document.querySelector(".delicious_div");
+  dataShow.innerHTML = "";
 
   data.slice(0, 6).map((el) => {
     const imageContainer = document.createElement("div");
@@ -90,3 +115,18 @@ const appendData = (data) => {
     dataShow.append(imageContainer);
   });
 };
+
+// Loader
+
+window.addEventListener("DOMContentLoaded", function () {
+  const loader = this.document.querySelector("#loader");
+  if (loader) {
+    loader.style.display = "none";
+  }
+});
+
+apiCall().finally(() => {
+  setTimeout(() => {
+    loader.classList.add("fade_out");
+  }, 1500);
+});
