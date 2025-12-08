@@ -54,14 +54,19 @@ startTimer();
 
 // API Fetching
 let API = "https://hetuk-restaurant.onrender.com/menu";
+const loader = document.querySelector("#loader");
 
 const apiCall = () => {
-  return fetch(API)
+  loader.style.display = "block";
+  fetch(API)
     .then((res) => res.json())
     .then((data) => {
       appendData(data);
     })
-    .catch((err) => console.log("Error: ", err));
+    .catch((err) => console.log("Error: ", err))
+    .finally(() => {
+      loader.style.display = "none";
+    });
 };
 
 const appendData = (data) => {
@@ -85,17 +90,3 @@ const appendData = (data) => {
     dataShow.append(imageContainer);
   });
 };
-
-// Loader
-window.addEventListener("DOMContentLoaded", function () {
-  const loader = this.document.querySelector("#loader");
-  if (loader) {
-    loader.style.display = "none";
-  }
-});
-
-apiCall().finally(() => {
-  setTimeout(() => {
-    loader.classList.add("fade_out");
-  }, 1500);
-});
