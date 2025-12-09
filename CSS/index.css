@@ -1486,3 +1486,175 @@ form {
 }
 
 /* Footer */
+
+footer {
+  background: url(../Utilies/footer-bg.jpg);
+  background-position: center;
+  color: #fff;
+  padding: 50px;
+}
+
+.footer_parent {
+  display: flex;
+  padding: 51px 171px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_child1 ul {
+  list-style: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 51px;
+  opacity: 0.7;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 21px;
+}
+
+.footer_child1 ul li {
+  cursor: pointer;
+}
+
+.footer_child2 {
+  position: relative;
+  padding: 90px 70px;
+  height: 91vh;
+  z-index: 1;
+  font-size: 17px;
+  background: url(../Utilies/form-pattern.png);
+  background-color: #000;
+  overflow: hidden;
+  text-align: center;
+}
+
+.footer_child2::before,
+.footer_child2::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  top: 0;
+  height: 100%;
+  background: url(../Utilies/footer-form-pattern.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer_child2::after {
+  right: 0;
+}
+
+.footer_child2::before {
+  left: 0;
+}
+
+.footer_logo {
+  margin-bottom: 41px;
+  width: 170px;
+  height: 51px;
+  object-fit: cover;
+}
+
+.footer_child2 p {
+  padding: 7px 0;
+  opacity: 0.7;
+  letter-spacing: 0.5px;
+}
+
+.footer_child2 p:hover {
+  opacity: 1;
+}
+
+.footer_link:hover,
+.footer_request:hover {
+  color: var(--golden);
+  cursor: pointer;
+}
+
+.footer_child2 h4 {
+  font-size: 35px;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+.discount {
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 21px;
+}
+
+.footer_input {
+  display: flex;
+  background-color: #1d1d1d;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.footer_input:active,
+.footer_input input:active {
+  border: 1px solid var(--golden);
+}
+
+.footer_sub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_input svg {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+  width: 15px;
+  height: 15px;
+}
+
+.footer_input input {
+  padding: 20px;
+  padding-left: 41px;
+  width: 250px;
+  caret-color: #fff;
+  background-color: transparent;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer_input input:active {
+  padding: 15px;
+}
+
+.footer_input input::placeholder {
+  padding: 25px;
+  opacity: 1;
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+
+.footer_sub button {
+  padding: 17px;
+  width: 150px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer_child3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 51px;
+  font-size: 31px;
+  color: var(--golden);
+}
+
+.footer_child3 i {
+  cursor: pointer;
+}

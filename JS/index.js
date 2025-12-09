@@ -63,7 +63,6 @@ function skeletonLoading() {
     skeletonDiv.className = "imageContainer";
 
     skeletonDiv.innerHTML = `
-    <div class="skeleton_flex">
       <div class="delicious_child">
         <div class="skeleton skeleton_img"></div>
       </div>
@@ -72,7 +71,6 @@ function skeletonLoading() {
         <div class="skeleton skeleton_price"></div>
         <div class="skeleton skeleton_text"></div>
       </div>
-    </div>
     `;
 
     container.append(skeletonDiv);
@@ -115,6 +113,10 @@ const appendData = (data) => {
     dataShow.append(imageContainer);
   });
 };
+
+document.querySelector(".footer_input").addEventListener("click", function () {
+  this.querySelector("input").focus();
+});
 
 // Loader
 

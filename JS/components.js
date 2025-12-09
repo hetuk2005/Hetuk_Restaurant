@@ -249,10 +249,10 @@ color: #fff;
   border: 2px solid #f0f0f0;
 }
 
-.nav_button > button {
+.nav_button > button,.footer_sub button {
   padding: 15px 45px;
   background-color: var(--golden);
-  border: 1px solid var(--golden);
+  border: 2px solid var(--golden);
   font-weight: 550;
   font-size: 15px;
   cursor: pointer;
@@ -261,7 +261,7 @@ color: #fff;
   z-index: 1;
 }
 
-.nav_button > button::after {
+.nav_button > button::after,.footer_sub button::after {
   content: "";
   position: absolute;
   height: 0;
@@ -275,12 +275,12 @@ color: #fff;
   border-bottom-right-radius: 50%;
 }
 
-.nav_button > button:hover::after {
+.nav_button > button:hover::after,.footer_sub button:hover::after {
   height: 100%;
   border-radius: 0;
 }
 
-.nav_button > button:hover {
+.nav_button > button:hover,.footer_sub button:hover {
   color: #fff;
 }
 
