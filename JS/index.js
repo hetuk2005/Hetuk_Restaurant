@@ -83,7 +83,7 @@ let API = "https://hetuk-restaurant.onrender.com/menu";
 const apiCall = () => {
   skeletonLoading();
 
-  fetch(API)
+  return fetch(API)
     .then((res) => res.json())
     .then((data) => {
       appendData(data);

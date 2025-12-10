@@ -568,8 +568,8 @@ nav {
   width: 35% !important;
 }
 
-.card_content a {
-  width: 43%;
+.button {
+  width: 43% !important;
   display: block;
   margin: 15px auto;
   font-size: 13px;
@@ -582,14 +582,20 @@ nav {
 
 .button1,
 .button2 {
+  position: relative;
+  display: inline-block;
+  margin: 15px 101px;
   font-weight: 600;
-  width: 35% !important;
+  color: var(--golden);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
   transition: all 0.3s ease-in-out;
 }
 
 .button1:hover,
 .button2:hover,
-.card_content a:hover {
+.button:hover {
   color: #fff;
 }
 
@@ -1504,18 +1510,70 @@ footer {
 .footer_child1 ul {
   list-style: none;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 51px;
   opacity: 0.7;
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   font-size: 21px;
+  display: inline-block;
 }
 
 .footer_child1 ul li {
+  position: relative;
   cursor: pointer;
+}
+
+/* Footer Underline Animation */
+
+.footer_child1 ul li {
+  position: relative;
+  margin: 61px 0;
+  padding: 11px 0;
+}
+
+.footer_child1 ul li:hover {
+  opacity: 1;
+  color: var(--golden);
+}
+
+.footer_child1 ul li::after,
+.button1::after,
+.button2::after,
+.button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: var(--golden);
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: center;
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+.button::after {
+  background-color: #fff !important;
+  width: 33% !important;
+  left: 27% !important;
+}
+
+.button1::after,
+.button2::after {
+  background-color: #fff;
+}
+
+.footer_child1 ul li:hover::after,
+.footer_child1 ul li:focus::after,
+.button1:focus::after,
+.button2:focus::after,
+.button:focus::after,
+.button1:hover::after,
+.button2:hover::after,
+.button:hover::after {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .footer_child2 {
@@ -1637,7 +1695,7 @@ footer {
 }
 
 .footer_sub button {
-  padding: 17px;
+  padding: 17px !important;
   width: 150px;
   font-size: 16px;
   font-weight: 700;
@@ -1657,4 +1715,25 @@ footer {
 
 .footer_child3 i {
   cursor: pointer;
+}
+
+.text_footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+}
+
+.copyright {
+  letter-spacing: 1.5px;
+  margin-left: 91px;
+  text-align: center;
+  font-size: 17px;
+  opacity: 0.7;
+}
+
+.text_footer a {
+  font-size: 17px;
+  color: var(--golden);
+  text-decoration: underline;
 }
