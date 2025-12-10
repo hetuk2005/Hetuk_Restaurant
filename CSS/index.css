@@ -1496,6 +1496,7 @@ form {
 footer {
   background: url(../Utilies/footer-bg.jpg);
   background-position: center;
+  background-repeat: no-repeat;
   color: #fff;
   padding: 50px;
 }
@@ -1736,4 +1737,116 @@ footer {
   font-size: 17px;
   color: var(--golden);
   text-decoration: underline;
+}
+
+@media (max-width: 320px) {
+  .arrow,
+  .book_table,
+  .shape_1,
+  .shape_2,
+  .about_img4,
+  .flavour_parent p br,
+  .about_content h2 br,
+  .about_para br {
+    display: none;
+  }
+  .slider img {
+    object-fit: cover;
+  }
+  .slider_content {
+    left: 0;
+    transform: translateY(0);
+    padding: 15px;
+  }
+  .slider_div p {
+    font-size: 13px;
+  }
+  .slider_content h1,
+  .flavour_parent h2 {
+    font-size: 33px;
+  }
+  .hero_description {
+    font-size: 15px !important;
+  }
+  .flavour_parent {
+    height: auto;
+  }
+  .flavour_parent p {
+    font-size: 17px;
+    line-height: 27px;
+    padding: 0 21px;
+  }
+  .flavour_grid {
+    display: flex;
+    flex-direction: column;
+    margin: 61px 17px;
+    margin-bottom: 71px;
+    gap: 50px;
+  }
+  .flavour_grid li:nth-child(2n + 1) {
+    transform: none;
+  }
+  .card_content h3,
+  .button,
+  .button1,
+  .button2 {
+    text-align: center;
+  }
+  .button1,
+  .button2 {
+    margin: 15px 91px;
+  }
+  .about_parent {
+    height: 207vh;
+    padding: 91px 0 0 0;
+  }
+  .flex_container {
+    flex-direction: column;
+  }
+  .story,
+  .delicious_title,
+  .special_title {
+    font-size: 15px;
+  }
+  .about_content {
+    padding: 0 11px;
+  }
+  .about_content h2 {
+    font-size: 29px;
+  }
+  .about_para {
+    line-height: 23px;
+  }
+  .about_label {
+    font-size: 16px;
+  }
+  .number {
+    font-size: 23px;
+  }
+  .about_banner {
+    margin: 0;
+  }
+  .about_banner img {
+    width: 287px;
+    height: 239px;
+    padding: 0px 0px 0px 39px;
+  }
+  .about_badge img {
+    height: 135px;
+    width: 133px;
+    padding: 0;
+  }
+  .about_abs_img {
+    left: -41px;
+    bottom: 150px;
+  }
+  .about_abs_img img {
+    width: 55%;
+    height: 170px;
+    object-fit: fill;
+  }
+  .about_abs_img::before {
+    left: 33%;
+    height: 271px;
+  }
 }
