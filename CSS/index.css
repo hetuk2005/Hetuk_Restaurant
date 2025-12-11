@@ -1849,4 +1849,23 @@ footer {
     left: 33%;
     height: 271px;
   }
+  .special_flex {
+    flex-direction: column;
+    height: auto;
+  }
+  .pav_bhaji {
+    width: 321px;
+    height: 307px;
+  }
+  .badge_1 {
+    animation: none;
+  }
+  .dish_about {
+    padding: 85px 0;
+  }
+  .badge_1 {
+    position: relative;
+    left: 45%;
+    top: -15px;
+  }
 }
