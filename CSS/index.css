@@ -1134,7 +1134,7 @@ nav {
 .reservation_child2 .location h5,
 .reservation_child2 .lunch h5,
 .reservation_child2 .dinner h5 {
-  font-size: 17;
+  font-size: 17px;
   letter-spacing: 1px;
   font-weight: 700;
   padding: 11px 0;
@@ -1744,10 +1744,19 @@ footer {
   .book_table,
   .shape_1,
   .shape_2,
+  .shape_4,
+  .shape_5,
+  .shape_6,
+  .shape_7,
+  .shape_8,
+  .shape_9,
   .about_img4,
   .flavour_parent p br,
   .about_content h2 br,
-  .about_para br {
+  .special_about br,
+  .about_para br,
+  .reg_description br,
+  .event_content h6 br {
     display: none;
   }
   .slider img {
@@ -1867,5 +1876,155 @@ footer {
     position: relative;
     left: 45%;
     top: -15px;
+  }
+  .special_about {
+    font-size: 18.5px;
+    line-height: 27px;
+    padding: 30px 15px;
+  }
+  .price_div {
+    padding: 15px 0;
+    justify-content: center;
+  }
+  .delicious_menu {
+    height: auto;
+  }
+  .delicious_menu h2 {
+    font-size: 27px;
+  }
+  .delicious_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 15px;
+  }
+  .delicious_child2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .imageContainer {
+    align-items: start;
+  }
+  .delicious_div::after,
+  .delicious_child2 .price::before {
+    content: none;
+  }
+  .registration {
+    background-position: center;
+    height: auto;
+  }
+  .reg_description {
+    letter-spacing: 1px;
+    line-height: 27px;
+    font-size: 19px;
+    padding: 17px 7px;
+  }
+  .reservation,
+  .flex_form,
+  .flex_form1 {
+    flex-direction: column;
+  }
+  .reservation_child1 {
+    top: -70px;
+    margin: 0 15px;
+    height: auto;
+    padding: 31px 21px;
+  }
+  .reservation_child2 {
+    top: -70px;
+    padding: 31px 21px;
+    margin: 0 15px;
+    height: auto;
+  }
+  .reservation_child1 h3 {
+    font-size: 27px;
+    letter-spacing: normal;
+  }
+  .bi-person,
+  .bi-calendar,
+  .bi-clock {
+    left: 15px;
+  }
+  .icon_wrapper,
+  .icon_wrapper1 {
+    text-align: left;
+  }
+  .reservation {
+    height: auto;
+  }
+  .person {
+    padding-right: 115px;
+  }
+  .time {
+    padding-right: 95px;
+  }
+  .reservation_child2 h2,
+  .reservation_child2 h1 {
+    font-size: 27px;
+  }
+  .reservation_child2 .location h6,
+  .reservation_child2 .lunch h6,
+  .reservation_child2 .dinner h6,
+  .reservation_child2 .location h5,
+  .reservation_child2 .lunch h5,
+  .reservation_child2 .dinner h5 {
+    font-size: 15px;
+  }
+  .strength {
+    padding: 21px 0;
+    height: auto;
+  }
+  .strength h2 {
+    font-size: 27px;
+  }
+  .card_parent {
+    flex-direction: column;
+  }
+  .event {
+    height: auto;
+    padding: 61px 0;
+  }
+  .event h2 {
+    font-size: 27px;
+  }
+  .event_parent {
+    flex-direction: column;
+  }
+  .event_card {
+    width: 90%;
+    height: auto;
+  }
+  .event_1 {
+    opacity: 0.5;
+  }
+  footer {
+    height: auto;
+    padding: 0;
+    background-size: cover;
+  }
+  .footer_parent {
+    padding: 51px 5px;
+    flex-direction: column;
+  }
+  .footer_child1 ul {
+    display: flex;
+    font-size: 15px;
+    justify-content: center;
+    gap: 11px;
+  }
+  .footer_child2 {
+    padding: 31px;
+    height: auto;
+    width: 100%;
+  }
+  .footer_child3 {
+    flex-direction: row;
+    gap: 25px;
+    margin: 25px 0;
+  }
+  .footer_input input,
+  .footer_sub button {
+    width: 50%;
   }
 }
