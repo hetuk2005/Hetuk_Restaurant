@@ -2059,3 +2059,6 @@ footer {
     font-size: 13px;
   }
 }
+
+@media (min-width: 321px) and (max-width: 430px) {
+}
