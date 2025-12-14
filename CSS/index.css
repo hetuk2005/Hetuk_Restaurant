@@ -1739,7 +1739,7 @@ footer {
   text-decoration: underline;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 430px) {
   .arrow,
   .book_table,
   .shape_1,
@@ -2061,4 +2061,24 @@ footer {
 }
 
 @media (min-width: 321px) and (max-width: 430px) {
+  .slider_content {
+    bottom: 31%;
+  }
+  .about_parent {
+    height: 195vh;
+  }
+  .person {
+    padding-right: 165px;
+  }
+  .icon_wrapper .time {
+    padding-right: 145px;
+  }
+  .service_card a {
+    width: 80%;
+    display: block;
+    margin: auto;
+  }
+  .card_content a {
+    margin: 21px auto;
+  }
 }
