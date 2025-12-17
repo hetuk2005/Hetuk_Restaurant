@@ -73,6 +73,63 @@ export const navBar = () => {
     `;
 };
 
+export const footerBar = () => {
+  return `
+            <div class="footer_parent">
+                <div class="footer_child1">
+                    <ul>
+                        <li>Home</li>
+                        <li>Menu</li>
+                        <li>About Us</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                <div class="footer_child2">
+                    <img src="./Utilies/Logo.svg" alt="Logo"
+                        class="footer_logo" loading="lazy">
+                    <p class="footer_add">Restaurant St, Delicious City,
+                        Mumbai, 401203,
+                        INDIA</p>
+                    <p class="footer_link">booking@hetuk.com</p>
+                    <p class="footer_request">Booking Request : +91
+                        9876543210</p>
+                    <p class="open">Open: 10:00 am - 11:00 pm</p>
+                    <div class="wrapper">
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                    </div>
+                    <h4>Get News & Offers</h4>
+                    <p class="discount">Subscribe us & get <a>25% off</a></p>
+                    <div class="footer_sub">
+                        <div class="footer_input">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                height="21px" viewBox="0 -960 960 960"
+                                width="21px" fill="currentColor"><path
+                                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"
+                                    class="mail_img" /></svg>
+                            <input type="text" placeholder="Your Mail">
+                        </div>
+                        <button><a href="#">Subscribe</a></button>
+                    </div>
+                </div>
+                <div class="footer_child3">
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-whatsapp"></i>
+                    <i class="bi bi-youtube"></i>
+                    <i class="bi bi-map"></i>
+                </div>
+            </div>
+            <div class="text_footer">
+                <p class="copyright">© 2025 Hetuk. All Rights Reserved |
+                    Crafted
+                    by</p><a href> Hetuk
+                    Patel</a>
+            </div>
+  `;
+};
+
 export const navStyle = () => {
   return `
   // .nav_parent{
@@ -529,9 +586,383 @@ html {
     `;
 };
 
+export const footerStyle = () => {
+  return `
+  
+footer {
+  background: url(./Utilies/footer-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 50px;
+}
+
+.footer_parent {
+  display: flex;
+  padding: 51px 171px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_child1 ul {
+  list-style: none;
+  text-align: center;
+  opacity: 0.7;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 21px;
+  display: inline-block;
+}
+
+.footer_child1 ul li {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Footer Underline Animation */
+
+.footer_child1 ul li {
+  position: relative;
+  margin: 61px 0;
+  padding: 11px 0;
+}
+
+.footer_child1 ul li:hover {
+  opacity: 1;
+  color: var(--golden);
+}
+
+.footer_child1 ul li::after,
+.button1::after,
+.button2::after,
+.button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: var(--golden);
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: center;
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+.button::after {
+  background-color: #fff !important;
+  width: 33% !important;
+  left: 27% !important;
+}
+
+.button1::after,
+.button2::after {
+  background-color: #fff;
+}
+
+.footer_child1 ul li:hover::after,
+.footer_child1 ul li:focus::after,
+.button1:focus::after,
+.button2:focus::after,
+.button:focus::after,
+.button1:hover::after,
+.button2:hover::after,
+.button:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.footer_child2 {
+  position: relative;
+  padding: 90px 70px;
+  height: 91vh;
+  z-index: 1;
+  font-size: 17px;
+  background: url(./Utilies/form-pattern.png);
+  background-color: #000;
+  overflow: hidden;
+  text-align: center;
+}
+
+.footer_child2::before,
+.footer_child2::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  top: 0;
+  height: 100%;
+  background: url(./Utilies/footer-form-pattern.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer_child2::after {
+  right: 0;
+}
+
+.footer_child2::before {
+  left: 0;
+}
+
+.footer_logo {
+  margin-bottom: 41px;
+  width: 170px;
+  height: 51px;
+  object-fit: cover;
+}
+
+.footer_child2 p {
+  padding: 7px 0;
+  opacity: 0.7;
+  letter-spacing: 0.5px;
+}
+
+.footer_child2 p:hover {
+  opacity: 1;
+}
+
+.footer_link:hover,
+.footer_request:hover {
+  color: var(--golden);
+  cursor: pointer;
+}
+
+.footer_child2 h4 {
+  font-size: 35px;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+.discount {
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 21px;
+}
+
+.footer_input {
+  display: flex;
+  background-color: #1d1d1d;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.footer_input:active,
+.footer_input input:active {
+  border: 1px solid var(--golden);
+}
+
+.footer_sub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_input svg {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+  width: 15px;
+  height: 15px;
+}
+
+.footer_input input {
+  padding: 20px;
+  padding-left: 41px;
+  width: 250px;
+  caret-color: #fff;
+  background-color: transparent;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer_input input:active {
+  padding: 15px;
+}
+
+.footer_input input::placeholder {
+  padding: 25px;
+  opacity: 1;
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+
+.footer_sub button {
+  padding: 17px !important;
+  width: 150px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer_child3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 51px;
+  font-size: 31px;
+  color: var(--golden);
+}
+
+.footer_child3 i {
+  cursor: pointer;
+}
+
+.text_footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+}
+
+.copyright {
+  letter-spacing: 1.5px;
+  margin-left: 91px;
+  text-align: center;
+  font-size: 17px;
+  opacity: 0.7;
+}
+
+.text_footer a {
+  font-size: 17px;
+  color: var(--golden);
+  text-decoration: underline;
+}
+
+
+@media (max-width: 430px){
+
+  .to-top {
+    right: 15px;
+  }
+  footer {
+    height: auto;
+    padding: 0;
+    background-size: cover;
+    padding: 51px 15px;
+  }
+  .footer_parent {
+    padding: 0;
+    flex-direction: column;
+  }
+  .footer_child1 ul {
+    display: flex;
+    font-size: 13px;
+    justify-content: center;
+    gap: 11px;
+  }
+  .footer_child2 {
+    padding: 31px;
+    height: auto;
+    width: 100%;
+  }
+  .footer_child3 {
+    flex-direction: row;
+    gap: 25px;
+    margin: 25px 0;
+  }
+  .footer_sub {
+    flex-direction: column;
+    gap: 21px;
+  }
+  .footer_input,
+  .footer_sub button {
+    width: 100%;
+  }
+  .text_footer {
+    gap: 0;
+    flex-direction: column;
+  }
+  .copyright {
+    letter-spacing: normal;
+    margin: 0;
+    font-size: 13px;
+  }
+  .text_footer a {
+    font-size: 13px;
+  }
+}
+
+
+@media (min-width: 321px) and (max-width: 430px){
+  .person {
+    padding-right: 165px;
+  }
+  .icon_wrapper .time {
+    padding-right: 145px;
+  }
+  .service_card a {
+    width: 80%;
+    display: block;
+    margin: auto;
+  }
+  .card_content a {
+    margin: 21px auto;
+  }
+}
+
+
+@media (min-width: 431px) and (max-width: 1340px){
+
+  footer {
+    padding: 21px 0;
+    height: auto;
+    background-size: cover;
+  }
+  .footer_parent {
+    flex-wrap: wrap;
+    padding: 51px 31px;
+    justify-content: center;
+    height: auto;
+  }
+  .footer_child2 {
+    order: 1;
+    height: auto;
+    width: 100%;
+  }
+  .footer_child1 {
+    order: 2;
+    margin-right: 150px;
+  }
+  .footer_child1 ul {
+    font-size: 17px;
+    gap: 31px;
+  }
+  .footer_child1 ul,
+  .footer_child3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-content: center;
+  }
+  .footer_child3 {
+    order: 3;
+    gap: 71px;
+  }
+  .footer_child3 i:last-child {
+    grid-column: 1/3;
+    width: calc(50%-20px);
+    margin-inline: auto;
+  }
+  .copyright {
+    margin: 0;
+  }
+  .to-top {
+    right: 17px;
+  }
+}
+`;
+};
+
 /*Navbar Media Query Styling */
 
-window.onload = () => {
+document.addEventListener("DOMContentLoaded", () => {
   const menuIcon = document.querySelector(".menu_img");
   const menuIcon1 = document.querySelector(".menu_img1");
   const sideBar = document.querySelector(".list_nav_none");
@@ -553,4 +984,4 @@ window.onload = () => {
   closeBtn.addEventListener("click", () => {
     sideBar.classList.remove("active");
   });
-};
+});

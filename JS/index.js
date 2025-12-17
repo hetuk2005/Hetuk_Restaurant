@@ -45,8 +45,8 @@ function resetTimer() {
 }
 
 // Button Events
-nextBtn.addEventListener("click", nextSlide);
-prevBtn.addEventListener("click", prevSlide);
+nextBtn?.addEventListener("click", nextSlide);
+prevBtn?.addEventListener("click", prevSlide);
 
 //Start Slider
 showSlide(index);
@@ -114,8 +114,15 @@ const appendData = (data) => {
   });
 };
 
-document.querySelector(".footer_input").addEventListener("click", function () {
-  this.querySelector("input").focus();
+// document.querySelector(".footer_input").addEventListener("click", function () {
+//   this.querySelector("input").focus();
+// });
+
+document.addEventListener("click", (e) => {
+  const footerInput = e.target.closest(".footer_input");
+  if (footerInput) {
+    footerInput.querySelector("input")?.focus();
+  }
 });
 
 // Loader
@@ -123,12 +130,8 @@ document.querySelector(".footer_input").addEventListener("click", function () {
 window.addEventListener("DOMContentLoaded", function () {
   const loader = this.document.querySelector("#loader");
   if (loader) {
-    loader.style.display = "none";
+    this.setTimeout(() => {
+      loader.classList.add("fade_out");
+    }, 1500);
   }
-});
-
-apiCall().finally(() => {
-  setTimeout(() => {
-    loader.classList.add("fade_out");
-  }, 1500);
 });
