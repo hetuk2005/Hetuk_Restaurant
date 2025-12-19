@@ -198,21 +198,31 @@ nav {
   background-color: #000;
   height: auto;
   padding: 21px 51px;
+  display: flex;
+  flex-direction: column;
+  gap: 51px;
 }
 
-.chef_child1 {
+.chef_child1,
+.chef_child2,
+.chef_child3 {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 131px;
 }
 
-.chef_child1 img,
+.chef_child2 {
+  flex-direction: row-reverse;
+}
+
 .chef_text {
   width: 50%;
 }
 
-.chef_child1 img {
+.chef_child1 img,
+.chef_child2 img,
+.chef_child3 img {
   width: inherit;
   height: 501px;
   border-radius: 21px;

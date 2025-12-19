@@ -78,9 +78,9 @@ export const footerBar = () => {
             <div class="footer_parent">
                 <div class="footer_child1">
                     <ul>
-                        <li>Home</li>
+                        <li><a href="../index.html">Home</a></li>
                         <li>Menu</li>
-                        <li>About Us</li>
+                        <li><a href="../HTML/About.html">About Us</a></li>
                         <li>Contact</li>
                     </ul>
                 </div>
