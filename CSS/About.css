@@ -204,7 +204,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 71px;
+  gap: 131px;
 }
 
 .chef_child1 img,
@@ -213,10 +213,27 @@ nav {
 }
 
 .chef_child1 img {
+  width: inherit;
   height: 501px;
-  object-fit: fill;
+  border-radius: 21px;
+  object-fit: cover;
 }
 
 .chef_text {
   color: #fff;
+}
+
+.chef_text p,
+.chef_text h3 {
+  width: 81%;
+  margin: auto;
+  padding: 15px 0;
+  font-size: 23px;
+  letter-spacing: 2px;
+  line-height: 31px;
+  text-transform: capitalize;
+}
+
+.chef_text p {
+  letter-spacing: 1px;
 }

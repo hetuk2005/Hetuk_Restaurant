@@ -34,7 +34,7 @@ export const navBar = () => {
                   </div>
                 <div class="list_nav">
                     <ul>
-                        <li>HOME</li>
+                        <li><a href="../index.html">HOME</a></li>
                         <li class="dropdown">MENU <i
                                 class="fa fa-angle-down"></i>
                             <ul class="dropdown_menu">
@@ -42,7 +42,7 @@ export const navBar = () => {
                                 <li>NON-VEG</li>
                             </ul>
                         </li>
-                        <li>ABOUT US</li>
+                        <li><a href="../HTML/About.html">ABOUT US</a></li>
                         <li>CONTACT</li>
                     </ul>
                 </div>
@@ -58,7 +58,7 @@ export const navBar = () => {
             <button class="close_btn">&times;</button>
             <img src="../Utilies/Logo.svg" alt="Logo">
             <ul>
-                <li>HOME</li>
+                <li><a href="../index.html">HOME</a></li>
                 <li class="dropdown_none">MENU <i
                         class="fa fa-angle-down"></i>
                     <ul class="dropdown_menu_none">
@@ -66,7 +66,7 @@ export const navBar = () => {
                         <li>NON-VEG</li>
                     </ul>
                 </li>
-                <li>ABOUT US</li>
+                <li><a href="../HTML/About.html">ABOUT US</a></li>
                 <li>CONTACT</li>
             </ul>
         </div>
