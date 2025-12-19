@@ -132,11 +132,6 @@ export const footerBar = () => {
 
 export const navStyle = () => {
   return `
-  // .nav_parent{
-  // display
-  // z-index: 21;
-  // }
-  
 .nav_parent p {
   color: #fff;
   font-size: 15px;
@@ -588,7 +583,6 @@ html {
 
 export const footerStyle = () => {
   return `
-  
 footer {
   background: url(./Utilies/footer-bg.jpg);
   background-position: center;
