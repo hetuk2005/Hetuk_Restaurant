@@ -14,5 +14,91 @@
     </head>
     <body>
 
+        <!-- Loader -->
+        <div id="loader">
+            <div class="spinner"></div>
+            <p class="loader_title">Hetuk</p>
+        </div>
+
+        <!-- Scroll_arrow -->
+        <a href="#" class="to-top">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+
+        <!-- Navbar -->
+        <nav></nav>
+        <div class="about">
+            <div class="hero">
+                <h1>The art of fine dining</h1>
+                <h5>Crafted with passion, served with elegance</h5>
+            </div>
+            <div class="content">
+                <h3>Introduction</h3>
+                <p>At Hetuk, we believe that every plate is a canvas. Fine
+                    dining is more than just a meal, it is a symphony of
+                    flavors, textures, and aromas. From the selection of the
+                    finest ingredients to the final touch of a garnish, we treat
+                    every dish as a work of art designed to delight your
+                    senses.</p>
+            </div>
+        </div>
+
+        <!-- Narrative Story -->
+        <div class="story">
+            <div class="story_child1">
+                <img src="../Utilies/about-abs-image.jpg" alt="Narrative Image">
+            </div>
+            <div class="story_child2">
+                <h3>The art of fine dining</h3>
+                <p>True luxury is found in the details. The Art of Fine Dining
+                    at Hetuk is an immersive experience that begins long before
+                    the first bite. It is the warm glow of our golden ambiance,
+                    the weight of the silverware, and the seamless grace of our
+                    service. We don't just serve meals, we craft unforgettable
+                    evenings where tradition meets modern elegance.</p>
+            </div>
+        </div>
+
+        <!-- Meet The Team -->
+        <div class="chef_parent">
+            <div class="chef_child1">
+                <img src="../Utilies/Chef-1.png" alt="Chef 1">
+                <div class="chef_text">
+                    <h3><b>Name: </b>Chef Adrian Thorne</h3>
+                    <h3><b>Role: </b>Executive Chef</h3>
+                    <p><b>Description: </b>A master of fusion who believes that
+                        every plate should tell a story. With experience in
+                        Michelin-starred kitchens, Adrian brings a "fine art"
+                        approach to traditional flavors.</p>
+                </div>
+            </div>
+            <!-- <div class="chef_child2"></div>
+            <div class="chef_child3"></div> -->
+        </div>
+        <!-- Footer -->
+        <footer></footer>
+
     </body>
+    <script type="module">
+        
+        import {navBar,footerBar,navStyle,footerStyle} from "../JS/Components.js";
+
+        document.querySelector("nav").innerHTML=navBar();
+        document.querySelector("footer").innerHTML=footerBar();
+
+        let styleTag=document.createElement("style");
+        styleTag.textContent=navStyle() + footerStyle();
+        document.head.append(styleTag);
+
+    //Scroll-Arrow-code
+const toTop = document.querySelector(".to-top");
+
+    window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 100) {
+            toTop.classList.add("active");
+        } else {
+            toTop.classList.remove("active");
+        }
+    });
+    </script>
 </html>

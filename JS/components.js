@@ -4,14 +4,14 @@ export const navBar = () => {
             <div class="nav_parent">
                 <div class="nav_child1">
                     <div class="location_child">
-                        <img src="./Utilies/Location.svg" alt="Location"
+                        <img src="../Utilies/Location.svg" alt="Location"
                             class="location_img">
                         <p class="loaction_text">Restaurant St, Delicious City,
                             Mumbai, 401203, INDIA</p>
                     </div>
                     <div class="seprator"></div>
                     <div class="time_child">
-                        <img src="./Utilies/Clock.svg" alt="Clock"
+                        <img src="../Utilies/Clock.svg" alt="Clock"
                             class="time_img">
                         <p class="time_text">Daily: 8:00 am to 10:00 pm</p>
                     </div>
@@ -29,8 +29,8 @@ export const navBar = () => {
             </div>
             <div class="nav_parent2">
                 <div class="logo_child">
-                    <img src="./Utilies/Logo.svg" alt="Logo" class="logo_img">
-                    <img src="./Utilies/Menu.svg" alt="Menu" class="menu_img">
+                    <img src="../Utilies/Logo.svg" alt="Logo" class="logo_img">
+                    <img src="../Utilies/Menu.svg" alt="Menu" class="menu_img">
                   </div>
                 <div class="list_nav">
                     <ul>
@@ -50,13 +50,13 @@ export const navBar = () => {
                     <button class="default">
                         FIND A TABLE
                     </button>
-                    <img src="./Utilies/Menu.svg" alt="Menu" class="menu_img1">
+                    <img src="../Utilies/Menu.svg" alt="Menu" class="menu_img1">
                 </div>
             </div>
         </nav>
         <div class="list_nav_none">
             <button class="close_btn">&times;</button>
-            <img src="./Utilies/Logo.svg" alt="Logo">
+            <img src="../Utilies/Logo.svg" alt="Logo">
             <ul>
                 <li>HOME</li>
                 <li class="dropdown_none">MENU <i
@@ -85,7 +85,7 @@ export const footerBar = () => {
                     </ul>
                 </div>
                 <div class="footer_child2">
-                    <img src="./Utilies/Logo.svg" alt="Logo"
+                    <img src="../Utilies/Logo.svg" alt="Logo"
                         class="footer_logo" loading="lazy">
                     <p class="footer_add">Restaurant St, Delicious City,
                         Mumbai, 401203,
@@ -584,7 +584,7 @@ html {
 export const footerStyle = () => {
   return `
 footer {
-  background: url(./Utilies/footer-bg.jpg);
+  background: url(../Utilies/footer-bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   color: #fff;
@@ -673,7 +673,7 @@ footer {
   height: 91vh;
   z-index: 1;
   font-size: 17px;
-  background: url(./Utilies/form-pattern.png);
+  background: url(../Utilies/form-pattern.png);
   background-color: #000;
   overflow: hidden;
   text-align: center;
@@ -686,7 +686,7 @@ footer {
   width: 15px;
   top: 0;
   height: 100%;
-  background: url(./Utilies/footer-form-pattern.svg);
+  background: url(../Utilies/footer-form-pattern.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -978,4 +978,15 @@ document.addEventListener("DOMContentLoaded", () => {
   closeBtn.addEventListener("click", () => {
     sideBar.classList.remove("active");
   });
+});
+
+// Loader
+
+window.addEventListener("DOMContentLoaded", function () {
+  const loader = this.document.querySelector("#loader");
+  if (loader) {
+    this.setTimeout(() => {
+      loader.classList.add("fade_out");
+    }, 1500);
+  }
 });

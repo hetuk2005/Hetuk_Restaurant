@@ -124,14 +124,3 @@ document.addEventListener("click", (e) => {
     footerInput.querySelector("input")?.focus();
   }
 });
-
-// Loader
-
-window.addEventListener("DOMContentLoaded", function () {
-  const loader = this.document.querySelector("#loader");
-  if (loader) {
-    this.setTimeout(() => {
-      loader.classList.add("fade_out");
-    }, 1500);
-  }
-});
