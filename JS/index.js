@@ -124,3 +124,5 @@ document.addEventListener("click", (e) => {
     footerInput.querySelector("input")?.focus();
   }
 });
+
+apiCall();

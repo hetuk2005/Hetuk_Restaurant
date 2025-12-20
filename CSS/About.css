@@ -26,7 +26,10 @@
 .chef_child3,
 .content,
 .story_child1,
-.story_child2 {
+.story_child2,
+.space,
+.expirence_hr,
+.inside_hr {
   animation: appear linear;
   animation-timeline: view();
   animation-range: entry 0% cover 41%;
@@ -269,4 +272,44 @@ nav {
 
 .chef_text p {
   letter-spacing: 1px;
+}
+
+.gallery {
+  background: #000;
+  padding: 27px 51px;
+  color: var(--golden);
+  display: flex;
+  flex-direction: column;
+  gap: 41px;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 35px;
+  letter-spacing: 2px;
+}
+
+.space h3,
+.expirence_hr h3,
+.inside_hr h3 {
+  font-size: 35px;
+  padding: 25px 0;
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+
+.image img {
+  width: 500px;
+  height: 51vh;
+  object-fit: cover;
+  border-radius: 21px;
+}
+
+.space .image,
+.expirence_hr .image,
+.inside_hr .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 21px;
 }
