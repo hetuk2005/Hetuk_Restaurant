@@ -9,6 +9,44 @@
   font-family: "Times New Roman", Times, serif;
 }
 
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.flavour_grid,
+.about_content,
+.about_banner,
+.pav_bhaji,
+.dish_about,
+.delicious_div,
+.delicious_menu .time,
+.delicious_menu button,
+.delicious_menu h2,
+.delicious_title,
+.separator,
+.reg_container,
+.reservation_child1,
+.reservation_child2,
+.delicious_title,
+.strength h2,
+.card,
+.card_parent,
+.event h2,
+.event_parent,
+.event_card,
+.event button {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 41%;
+}
+
 /* .nav_parent{
    display
  z-index: 21;

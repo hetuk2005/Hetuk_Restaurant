@@ -9,6 +9,29 @@
   font-family: "Times New Roman", Times, serif;
 }
 
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.about,
+.chef_child1,
+.chef_child2,
+.chef_child3,
+.content,
+.story_child1,
+.story_child2 {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 41%;
+}
+
 /* Pre-Loader */
 
 #loader {
@@ -100,7 +123,7 @@ nav {
   position: relative;
   color: #fff;
   background: url(../Utilies/hero_slider_3.jpg);
-  height: 85vh;
+  height: 97vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -116,14 +139,14 @@ nav {
 }
 
 .hero h1 {
-  font-size: 41px;
+  font-size: 51px;
   letter-spacing: 2px;
-  padding: 45px 0;
+  padding: 71px 0;
   color: var(--golden);
 }
 
 .hero h5 {
-  font-size: 25px;
+  font-size: 31px;
   letter-spacing: 2px;
   font-weight: normal;
 }
@@ -163,7 +186,7 @@ nav {
   background: #000;
   color: #fff;
   gap: 51px;
-  padding: 31px 71px;
+  padding: 81px 71px;
   height: 100vh;
   text-align: center;
   text-transform: capitalize;
