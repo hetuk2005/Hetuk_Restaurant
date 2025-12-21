@@ -33,7 +33,6 @@
 .reg_container,
 .reservation_child1,
 .reservation_child2,
-.delicious_title,
 .strength h2,
 .card,
 .card_parent,
@@ -376,7 +375,7 @@ nav {
 .flavour_div img,
 .about_content img,
 .separator {
-  width: 100px;
+  width: 101px;
   display: block;
   margin: 21px auto;
 }

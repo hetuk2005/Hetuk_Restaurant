@@ -28,11 +28,20 @@
 .story_child1,
 .story_child2,
 .space,
+.strength .delicious_title,
+.strength h2,
+.card_parent .card,
 .expirence_hr,
 .inside_hr {
   animation: appear linear;
   animation-timeline: view();
   animation-range: entry 0% cover 41%;
+}
+
+.separator {
+  width: 101px;
+  margin: 21px auto;
+  display: block;
 }
 
 /* Pre-Loader */
@@ -182,6 +191,8 @@ nav {
   margin: auto;
 }
 
+/* Narrative Story */
+
 .story {
   display: flex;
   justify-content: space-between;
@@ -220,13 +231,21 @@ nav {
   margin: auto;
 }
 
+/* Meet The Team */
+
 .chef_parent {
   background-color: #000;
   height: auto;
   padding: 21px 51px;
-  display: flex;
-  flex-direction: column;
-  gap: 51px;
+}
+
+.chef_parent h2 {
+  font-size: 35px;
+  padding: 45px 0;
+  padding-top: 55px;
+  letter-spacing: 2px;
+  text-align: center;
+  color: var(--golden);
 }
 
 .chef_child1,
@@ -274,13 +293,13 @@ nav {
   letter-spacing: 1px;
 }
 
+/* Image Gallery */
+
 .gallery {
   background: #000;
+  height: 223vh;
   padding: 27px 51px;
   color: var(--golden);
-  display: flex;
-  flex-direction: column;
-  gap: 41px;
   text-align: center;
 }
 
@@ -293,7 +312,8 @@ nav {
 .expirence_hr h3,
 .inside_hr h3 {
   font-size: 35px;
-  padding: 25px 0;
+  padding: 45px 0;
+  padding-top: 55px;
   font-weight: normal;
   letter-spacing: 2px;
 }
@@ -312,4 +332,93 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 21px;
+}
+
+/* Strength */
+
+.strength {
+  background-color: #161719;
+  height: 91vh;
+  padding: 81px 0;
+  position: relative;
+}
+
+.strength h2 {
+  font-size: 57px;
+  color: var(--golden);
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 2px;
+  /* margin: 11px 0; */
+}
+
+.card_parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 41px;
+  margin: 41px 0;
+}
+
+.card {
+  text-align: center;
+  padding: 31px;
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+
+.card_parent .card:nth-child(odd) {
+  background-color: #1d1d1d;
+}
+
+.card_parent .card:nth-child(even) {
+  background-color: #111;
+}
+
+.card_icon {
+  transform: rotate(0deg);
+  transition: all 0.5s ease-in-out;
+}
+
+.card_icon:hover {
+  transform: rotate(360deg);
+}
+
+.card h3 {
+  margin: 21px 0;
+  font-weight: 100;
+  font-size: 25px;
+}
+
+.card p {
+  font-size: 15px;
+  opacity: 0.7;
+}
+
+.shape_8 {
+  position: absolute;
+  bottom: 51px;
+  left: 0;
+}
+
+@media (max-width: 430px) {
+  .strength {
+    padding: 21px 0;
+    height: auto;
+  }
+  .strength h2 {
+    font-size: 27px;
+  }
+  .card_parent {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 431px) and (max-width: 1340px) {
+  .strength {
+    height: auto;
+  }
+  .strength h2 {
+    font-size: 35px;
+  }
 }
