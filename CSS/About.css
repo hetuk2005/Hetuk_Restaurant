@@ -402,6 +402,88 @@ nav {
 }
 
 @media (max-width: 430px) {
+  .shape_8 {
+    display: none;
+  }
+  .hero h1,
+  .hero h5 {
+    bottom: 21%;
+    left: 0;
+    text-align: center;
+    transform: none;
+  }
+  .hero h1 {
+    /* padding: 71px 35px; */
+    width: 100%;
+    margin: auto;
+    font-size: 31px;
+  }
+  .hero h5 {
+    font-size: 23px;
+  }
+  .about {
+    height: auto;
+  }
+  .content {
+    margin: auto;
+    width: 100%;
+  }
+  .content p,
+  .story_child2 p {
+    width: 90%;
+    margin: auto;
+  }
+  .story {
+    padding: 51px 11px;
+    flex-direction: column;
+    height: auto;
+    gap: 21px;
+  }
+  .story_child1,
+  .story_child2,
+  .chef_text {
+    width: 100%;
+  }
+  .chef_parent {
+    padding: 0;
+  }
+  .chef_child1,
+  .chef_child2,
+  .chef_child3 {
+    flex-direction: column;
+    margin-top: 31px;
+    gap: 51px;
+  }
+  .chef_text p,
+  .chef_text h3 {
+    padding: 11px 0;
+    font-size: 18px;
+  }
+  .gallery {
+    padding: 27px 21px;
+    padding-bottom: 51px;
+    height: auto;
+  }
+  .space h3,
+  .expirence_hr h3,
+  .inside_hr h3 {
+    padding: 29px 0;
+    font-size: 27px;
+  }
+  .image img {
+    width: 91%;
+    margin: auto;
+  }
+  .space .image,
+  .expirence_hr .image,
+  .inside_hr .image {
+    flex-direction: column;
+  }
+  .card,
+  .expirence_hr,
+  .inside_hr {
+    margin-top: 21px;
+  }
   .strength {
     padding: 21px 0;
     height: auto;
