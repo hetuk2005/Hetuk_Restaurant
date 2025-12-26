@@ -22,7 +22,7 @@ function showSlide(i) {
   resetTimer();
 }
 
-//Next SLide
+//Next Slide
 function nextSlide() {
   showSlide(index + 1);
 }
