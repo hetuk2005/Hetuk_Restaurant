@@ -182,63 +182,63 @@
     },
     {
       "id": 21,
-      "img": "https://raw.githubusercontent.com/hetuk2005/Hetuk_Restaurant/refs/heads/main/Utilies/special-dish-banner.jpg",
+      "img": "https://github.com/hetuk2005/Hetuk_Restaurant/blob/main/Utilies/Classic%20Tiramisu.png?raw=true",
       "title": "Classic Tiramisu",
-      "description": "Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.",
+      "description": "Layers of espresso-soaked sponge, mascarpone cream, and cocoa dusted elegance.",
       "category": "Veg",
       "price": "380",
       "type": "Dessert"
     },
     {
       "id": 22,
-      "img": "https://raw.githubusercontent.com/hetuk2005/Hetuk_Restaurant/refs/heads/main/Utilies/special-dish-banner.jpg",
+      "img": "https://github.com/hetuk2005/Hetuk_Restaurant/blob/main/Utilies/Chocolate%20Lava%20Cake.png?raw=true",
       "title": "Chocolate Lava Cake",
-      "description": "Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.",
+      "description": "Warm chocolate cake with a molten center that melts at first bite.",
       "category": "Veg",
       "price": "360",
       "type": "Dessert"
     },
     {
       "id": 23,
-      "img": "https://raw.githubusercontent.com/hetuk2005/Hetuk_Restaurant/refs/heads/main/Utilies/special-dish-banner.jpg",
+      "img": "https://github.com/hetuk2005/Hetuk_Restaurant/blob/main/Utilies/Vanilla%20Bean%20Panna%20Cotta.png?raw=true",
       "title": "Vanilla Bean Panna Cotta",
-      "description": "Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.",
+      "description": "Silky Italian custard delicately flavored with real vanilla beans.",
       "category": "Veg",
       "price": "340",
       "type": "Dessert"
     },
     {
       "id": 24,
-      "img": "https://raw.githubusercontent.com/hetuk2005/Hetuk_Restaurant/refs/heads/main/Utilies/special-dish-banner.jpg",
+      "img": "https://github.com/hetuk2005/Hetuk_Restaurant/blob/main/Utilies/Baked%20New%20York%20Cheesecake.png?raw=true",
       "title": "Baked New York Cheesecake",
-      "description": "Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.",
+      "description": "Rich, creamy cheesecake baked to perfection on a buttery biscuit base.",
       "category": "Veg",
       "price": "390",
       "type": "Dessert"
     },
     {
       "id": 25,
-      "img": "https://raw.githubusercontent.com/hetuk2005/Hetuk_Restaurant/refs/heads/main/Utilies/special-dish-banner.jpg",
+      "img": "https://github.com/hetuk2005/Hetuk_Restaurant/blob/main/Utilies/Botanical%20Mint%20Cooler.png?raw=true",
       "title": "Botanical Mint Cooler",
-      "description": "Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.",
+      "description": "A cooling fusion of garden-fresh mint, lime, and subtle botanical aromas.",
       "category": "Veg",
       "price": "220",
       "type": "Drink"
     },
     {
       "id": 26,
-      "img": "https://raw.githubusercontent.com/hetuk2005/Hetuk_Restaurant/refs/heads/main/Utilies/special-dish-banner.jpg",
+      "img": "https://github.com/hetuk2005/Hetuk_Restaurant/blob/main/Utilies/Citrus%20Iced%20Tea.png?raw=true",
       "title": "Citrus Iced Tea",
-      "description": "Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.",
+      "description": "Chilled brewed tea infused with fresh citrus for a bright, refined finish.",
       "category": "Veg",
       "price": "200",
       "type": "Drink"
     },
     {
       "id": 27,
-      "img": "https://raw.githubusercontent.com/hetuk2005/Hetuk_Restaurant/refs/heads/main/Utilies/special-dish-banner.jpg",
+      "img": "https://github.com/hetuk2005/Hetuk_Restaurant/blob/main/Utilies/Signature%20Berry%20Mocktail.png?raw=true",
       "title": "Signature Berry Mocktail",
-      "description": "Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.",
+      "description": "A refreshing blend of hand-picked berries, citrus notes, and sparkling elegance.",
       "category": "Veg",
       "price": "260",
       "type": "Drink"

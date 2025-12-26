@@ -5,8 +5,52 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Menu</title>
         <link rel="stylesheet" href="../CSS/Menu.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+        <link rel="shortcut icon" href="../Utilies/favicon.svg"
+            type="image/x-icon">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     </head>
     <body>
 
+        <!-- Loader -->
+        <div id="loader">
+            <div class="spinner"></div>
+            <p class="loader_title">Hetuk</p>
+        </div>
+
+        <!-- Scroll_arrow -->
+        <a href="#" class="to-top">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+
+        <!-- Navbar -->
+        <nav></nav>
+
+        <!-- Footer -->
+        <footer></footer>
     </body>
+    <script type="module">
+        
+        import {navBar,footerBar,navStyle,footerStyle} from "../JS/Components.js";
+
+        document.querySelector("nav").innerHTML=navBar();
+        document.querySelector("footer").innerHTML=footerBar();
+
+        let styleTag=document.createElement("style");
+        styleTag.textContent=navStyle() + footerStyle();
+        document.head.append(styleTag);
+
+    //Scroll-Arrow-code
+const toTop = document.querySelector(".to-top");
+
+    window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 100) {
+            toTop.classList.add("active");
+        } else {
+            toTop.classList.remove("active");
+        }
+    });
+    </script>
 </html>
