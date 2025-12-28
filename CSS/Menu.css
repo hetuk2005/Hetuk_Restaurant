@@ -242,6 +242,7 @@ nav {
   border-top-left-radius: 11px;
   width: inherit;
   height: inherit;
+  object-fit: cover;
 }
 
 .menu_details {

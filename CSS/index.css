@@ -964,6 +964,7 @@ nav {
 .items_img {
   width: 100px;
   height: 100px;
+  object-fit: cover;
   border-radius: 21px;
   transition: all 0.3s ease-in-out;
   opacity: 1;
