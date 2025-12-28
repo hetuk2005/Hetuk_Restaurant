@@ -37,8 +37,13 @@
                 class="separator" loading="lazy">
         </div>
 
+        <!-- Filter -->
+
         <div class="filter">
-            <i class="bi bi-funnel-fill"></i>
+            <div class="filter_child">
+                <p>Filter</p>
+                <i class="fa fa-angle-down"></i>
+            </div>
         </div>
 
         <!-- Menu -->
@@ -52,6 +57,16 @@
             </div>
             <h3>The Collection</h3>
             <div class="menu_items"></div>
+
+            <!-- Pagination -->
+
+            <div class="pagination">
+                <button class="prev">Prev</button>
+                <div class="page_number">
+                    Page <span id="currentPage">1</span>Of<span>1</span>
+                </div>
+                <button class="next">Next</button>
+            </div>
         </div>
 
         <!-- Footer -->

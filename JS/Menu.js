@@ -1,15 +1,33 @@
 // API Fetching
 let API = "https://hetuk-restaurant.onrender.com/menu";
 
-const apiCall = () => {
+let allData = [];
+let currentPage = 1;
+let limit = 6;
+
+const apiCall = async () => {
   //   skeletonLoading();
 
-  return fetch(API)
-    .then((res) => res.json())
-    .then((data) => {
-      appendData(data);
-    })
-    .catch((err) => console.log("Error: ", err));
+  // Pagination Setup
+
+  try {
+    const res = await fetch(API);
+    const data = await res.json();
+
+    allData = data.menu || data;
+    renderPage(currentPage);
+    setupPagination();
+  } catch (err) {
+    console.log("Error: ", err);
+  }
+};
+
+const renderPage = (page) => {
+  const start = (page - 1) * limit;
+  const end = start + limit;
+  const paginatedData = allData.slice(start, end);
+
+  appendData(paginatedData);
 };
 
 const appendData = (data) => {
@@ -32,6 +50,30 @@ const appendData = (data) => {
 
     dataShow.append(imageContainer);
   });
+};
+
+// Pagination Button
+
+const setupPagination = () => {
+  const totalPages = Math.ceil(allData.length / limit);
+  document.querySelector("#currentPage").innerHTML = currentPage;
+  document.querySelector(".page_number span:last-child").innerHTML = totalPages;
+  
+  document.querySelector(".prev").onclick = () => {
+    if (currentPage > 1) {
+      currentPage--;
+      renderPage(currentPage);
+      setupPagination();
+    }
+  };
+
+  document.querySelector(".next").onclick = () => {
+    if (currentPage < totalPages) {
+      currentPage++;
+      renderPage(currentPage);
+      setupPagination();
+    }
+  };
 };
 
 document.addEventListener("DOMContentLoaded", () => {

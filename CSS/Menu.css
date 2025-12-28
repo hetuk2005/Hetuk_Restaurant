@@ -127,6 +127,37 @@ nav {
   left: 46%;
 }
 
+/* Filter */
+
+.filter {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 11px;
+  color: var(--golden);
+  background-color: #000;
+  padding: 31px 41px;
+}
+
+.filter_child {
+  display: flex;
+  padding: 11px 21px;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+  cursor: pointer;
+  border: 2px solid var(--golden);
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.filter p {
+  color: #fff;
+  font-size: 21px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
 /* Menu */
 
 .menu {
@@ -157,7 +188,10 @@ nav {
   font-weight: 900;
 }
 
-.button_menu button:hover {
+.button_menu button:hover,
+.filter_child:hover,
+.prev:hover,
+.next:hover {
   color: var(--golden);
   box-shadow: 0 0 15px var(--golden), 0 0 15px var(--golden),
     0 0 15px var(--golden), 0 0 15px var(--golden), 0 0 15px var(--golden);
@@ -193,6 +227,7 @@ nav {
   color: #fff;
   border: 3px solid var(--golden);
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 .menu_items_img {
   width: 100%;
@@ -228,4 +263,39 @@ nav {
   letter-spacing: 1px;
   text-transform: capitalize;
   padding: 11px 0;
+}
+
+/* Pagination */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 41px;
+  padding: 21px 0;
+}
+
+.prev,
+.next {
+  padding: 11px 15px;
+  letter-spacing: 1px;
+  font-size: large;
+  font-weight: 900;
+  color: var(--golden);
+  background: transparent;
+  border: 2px solid var(--golden);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.page_number {
+  color: var(--golden);
+  font-size: large;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.page_number span {
+  padding: 0 7px;
 }

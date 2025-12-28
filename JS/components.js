@@ -1,6 +1,5 @@
 export const navBar = () => {
   return `
-    
             <div class="nav_parent">
                 <div class="nav_child1">
                     <div class="location_child">
