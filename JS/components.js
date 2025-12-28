@@ -34,7 +34,7 @@ export const navBar = () => {
                 <div class="list_nav">
                     <ul>
                         <li><a href="../index.html">HOME</a></li>
-                        <li class="dropdown">MENU <i
+                        <li class="dropdown"><a href="../HTML/Menu.html">MENU </a><i
                                 class="fa fa-angle-down"></i>
                             <ul class="dropdown_menu">
                                 <li>VEG</li>
@@ -58,7 +58,7 @@ export const navBar = () => {
             <img src="../Utilies/Logo.svg" alt="Logo">
             <ul>
                 <li><a href="../index.html">HOME</a></li>
-                <li class="dropdown_none">MENU <i
+                <li class="dropdown_none"><a href="../HTML/Menu.html">MENU </a> <i
                         class="fa fa-angle-down"></i>
                     <ul class="dropdown_menu_none">
                         <li>VEG</li>
@@ -78,7 +78,7 @@ export const footerBar = () => {
                 <div class="footer_child1">
                     <ul>
                         <li><a href="../index.html">Home</a></li>
-                        <li>Menu</li>
+                        <li><a href="../HTML/Menu.html">MENU </a></li>
                         <li><a href="../HTML/About.html">About Us</a></li>
                         <li>Contact</li>
                     </ul>
