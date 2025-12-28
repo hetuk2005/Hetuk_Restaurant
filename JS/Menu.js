@@ -21,13 +21,12 @@ const appendData = (data) => {
     imageContainer.className = "imageContainer";
 
     imageContainer.innerHTML = `
-            <div class="menu_img">
+            <div class="menu_items_img">
                 <img src="${el.img}" alt="Menu Image" class="items_img" loading="lazy">
             </div>
             <div class="menu_details">
                 <h4 class="title">${el.title}</h4>
                 <h6 class="price">₹${el.price}</h6>
-            <p class="description">${el.description}</p>
             </div>
     `;
 
