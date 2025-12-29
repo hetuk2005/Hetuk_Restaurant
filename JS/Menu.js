@@ -109,9 +109,18 @@ const setupFilter = () => {
       e.stopPropagation();
       selectedCategory = li.dataset.filter;
 
-      // Update filter text
-      filterText.innerText =
-        selectedCategory === "All" ? "Filter" : selectedCategory;
+      if (selectedCategory === "All") {
+        selectedCategory = "All";
+        selectedType = "All";
+
+        filterText.innerHTML = "Filter";
+
+        document
+          .querySelectorAll(".button_menu button")
+          .forEach((b) => b.classList.remove("active"));
+      } else {
+        filterText.innerHTML = selectedCategory;
+      }
 
       applyFilter();
       // Close dropdown
