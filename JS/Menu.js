@@ -5,6 +5,8 @@ let allData = [];
 let filterData = [];
 let currentPage = 1;
 let limit = 6;
+let selectedType = "All";
+let selectedCategory = "All";
 
 const apiCall = async () => {
   //   skeletonLoading();
@@ -16,7 +18,7 @@ const apiCall = async () => {
     const data = await res.json();
 
     allData = data;
-    filterData = allData;
+    filterData = data;
     renderPage(currentPage);
     setupPagination();
   } catch (err) {
@@ -53,11 +55,47 @@ const appendData = (data) => {
             <div class="menu_details">
                 <h4 class="title">${el.title}</h4>
                 <h6 class="price">₹${el.price}</h6>
+                <p class="desc">${el.description}</p>
             </div>
     `;
 
     dataShow.append(imageContainer);
   });
+};
+
+const applyFilter = () => {
+  let result = allData;
+
+  if (selectedType !== "All") {
+    result = result.filter(
+      (item) => item.type.toLowerCase() == selectedType.toLowerCase()
+    );
+  }
+
+  if (selectedCategory !== "All") {
+    result = result.filter(
+      (item) => item.category.toLowerCase() == selectedCategory.toLowerCase()
+    );
+  }
+
+  filterData = result;
+  currentPage = 1;
+
+  if (filterData.length === 0) {
+    document.querySelector(".menu_items").innerHTML =
+      "<p style='color:#fff;text-align:center;'>No items found</p>";
+
+    document.querySelector("#currentPage").innerText = 0;
+    document.querySelector(".page_number span:last-child").innerText = 0;
+
+    document.querySelector(".prev").disabled = true;
+    document.querySelector(".next").disabled = true;
+
+    return;
+  }
+
+  renderPage(currentPage);
+  setupPagination();
 };
 
 // FIlter Setup
@@ -69,23 +107,13 @@ const setupFilter = () => {
   document.querySelectorAll(".filter_child ul li").forEach((li) => {
     li.addEventListener("click", (e) => {
       e.stopPropagation();
-
-      const value = li.getAttribute("data-filter");
+      selectedCategory = li.dataset.filter;
 
       // Update filter text
-      filterText.innerText = value === "All" ? "Filter" : value;
+      filterText.innerText =
+        selectedCategory === "All" ? "Filter" : selectedCategory;
 
-      // Apply filter
-      if (value === "All") {
-        filterData = allData;
-      } else {
-        filterData = allData.filter((item) => item.category === value);
-      }
-
-      currentPage = 1;
-      renderPage(currentPage);
-      setupPagination();
-
+      applyFilter();
       // Close dropdown
       filterBox.classList.remove("active");
     });
@@ -122,6 +150,19 @@ const setupPagination = () => {
     }
   };
 };
+
+document.querySelectorAll(".button_menu button").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    selectedType = btn.innerText.trim();
+
+    applyFilter();
+
+    document
+      .querySelectorAll(".button_menu button")
+      .forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+  });
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   const filterBox = document.querySelector(".filter_child");
