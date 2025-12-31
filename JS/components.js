@@ -276,6 +276,10 @@ color: #fff;
   transform: scale(1);
 }
 
+.dropdown.active i{
+  transform: rotate(180deg);
+}
+
 .dropdown_menu_none li:hover::after,
 .dropdown_menu_none li:focus::after,
 .dropdown_menu li:hover::after,

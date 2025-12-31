@@ -1,3 +1,24 @@
+// Skeleton Loading
+
+const showSkeleton = () => {
+  const skeletonContainer = document.querySelector(".loading_menu");
+  skeletonContainer.innerHTML = "";
+
+  for (let i = 0; i < limit; i++) {
+    const div = document.createElement("div");
+    div.className = "skeleton_card";
+    skeletonContainer.append(div);
+  }
+
+  skeletonContainer.style.display = "grid";
+  document.querySelector(".menu_items").style.display = "none";
+};
+
+const hideSkeleton = () => {
+  document.querySelector(".loading_menu").style.display = "none";
+  document.querySelector(".menu_items").style.display = "grid";
+};
+
 // API Fetching
 let API = "https://hetuk-restaurant.onrender.com/menu";
 
@@ -9,7 +30,7 @@ let selectedType = "All";
 let selectedCategory = "All";
 
 const apiCall = async () => {
-  //   skeletonLoading();
+  showSkeleton();
 
   // Pagination Setup
 
@@ -19,6 +40,7 @@ const apiCall = async () => {
 
     allData = data;
     filterData = data;
+    hideSkeleton();
     renderPage(currentPage);
     setupPagination();
   } catch (err) {

@@ -419,3 +419,29 @@ nav {
   box-shadow: none;
   transform: none;
 }
+
+/* Skeleton Loading */
+
+.loading_menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 21px;
+  padding: 31px 51px;
+}
+
+.skeleton_card {
+  height: 65vh;
+  border-radius: 11px;
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 37%, #1a1a1a 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
