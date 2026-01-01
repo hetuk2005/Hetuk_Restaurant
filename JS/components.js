@@ -33,16 +33,16 @@ export const navBar = () => {
                   </div>
                 <div class="list_nav">
                     <ul>
-                        <li><a href="../index.html">HOME</a></li>
-                        <li class="dropdown"><a href="../HTML/Menu.html">MENU </a><i
+                        <li><a href="../index.html" class="nav_link">HOME</a></li>
+                        <li class="dropdown"><a href="../HTML/Menu.html" class="nav_link">MENU </a><i
                                 class="fa fa-angle-down"></i>
                             <ul class="dropdown_menu">
                                 <li>VEG</li>
                                 <li>NON-VEG</li>
                             </ul>
                         </li>
-                        <li><a href="../HTML/About.html">ABOUT US</a></li>
-                        <li>CONTACT</li>
+                        <li><a href="../HTML/About.html" class="nav_link">ABOUT US</a></li>
+                        <li class="nav_link">CONTACT</li>
                     </ul>
                 </div>
                 <div class="nav_button">
@@ -134,6 +134,11 @@ export const navStyle = () => {
 .nav_parent p {
   color: #fff;
   font-size: 15px;
+}
+
+.nav_link.active{
+  color: var(--golden);
+  text-shadow: 0 0 10px var(--golden);
 }
 
 .call_img,.mail_img{
@@ -287,7 +292,7 @@ color: #fff;
   opacity: 0 !important;
 }
 
-.dropdown:hover .dropdown_menu {
+.dropdown.active .dropdown_menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -462,6 +467,12 @@ html {
     transform: translateY(0) !important;
     margin-top: 5px;
   }
+    .dropdown_none i {
+  transition: transform 0.3s ease;
+}
+.dropdown_none.open i {
+  transform: rotate(180deg);
+}
   .dropdown_none.open .dropdown_menu_none {
     opacity: 1;
     visibility: visible;
@@ -506,6 +517,12 @@ html {
   .nav_child2 {
     width: 100%;
   }
+    .dropdown_none i {
+  transition: transform 0.3s ease;
+}
+.dropdown_none.open i {
+  transform: rotate(180deg);
+}
   .nav_button {
     display: flex;
     justify-content: center;
@@ -957,6 +974,27 @@ footer {
 `;
 };
 
+// Highlight Navbar
+
+export const setActive = () => {
+  const currentPath = window.location.pathname.split("/").pop();
+
+  document.querySelectorAll(".nav_link").forEach((link) => {
+    const linkPath = link.getAttribute("href").split("/").pop();
+
+    if (
+      linkPath === currentPath ||
+      (currentPath === "") & (linkPath === "index.html")
+    ) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+};
+
+setActive();
+
 /*Navbar Media Query Styling */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -964,6 +1002,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuIcon1 = document.querySelector(".menu_img1");
   const sideBar = document.querySelector(".list_nav_none");
   const dropDown = document.querySelector(".dropdown_none");
+  const dropDownDesktop = document.querySelector(".dropdown");
   const closeBtn = document.querySelector(".close_btn");
 
   menuIcon.addEventListener("click", () => {
@@ -972,6 +1011,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   menuIcon1.addEventListener("click", () => {
     sideBar.classList.toggle("active");
+  });
+
+  dropDownDesktop.addEventListener("click", (e) => {
+    e.stopPropagation();
+    dropDownDesktop.classList.toggle("active");
+  });
+
+  document.addEventListener("click", () => {
+    dropDownDesktop.classList.remove("active");
   });
 
   dropDown.addEventListener("click", () => {

@@ -80,7 +80,7 @@
     </body>
     <script type="module">
         
-        import {navBar,footerBar,navStyle,footerStyle} from "../JS/Components.js";
+        import {navBar,footerBar,navStyle,footerStyle,setActive} from "../JS/Components.js";
 
         document.querySelector("nav").innerHTML=navBar();
         document.querySelector("footer").innerHTML=footerBar();
@@ -88,6 +88,8 @@
         let styleTag=document.createElement("style");
         styleTag.textContent=navStyle() + footerStyle();
         document.head.append(styleTag);
+
+        setActive();
 
     //Scroll-Arrow-code
 const toTop = document.querySelector(".to-top");
