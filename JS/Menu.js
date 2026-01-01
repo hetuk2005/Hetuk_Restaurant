@@ -1,3 +1,6 @@
+const urlParams = new URLSearchParams(window.location.search);
+const categoryFormURL = urlParams.get("category");
+
 // Skeleton Loading
 
 const showSkeleton = () => {
@@ -41,8 +44,16 @@ const apiCall = async () => {
     allData = data;
     filterData = data;
     hideSkeleton();
-    renderPage(currentPage);
-    setupPagination();
+    if (categoryFormURL) {
+      selectedCategory = categoryFormURL;
+      selectedType = "All";
+
+      document.querySelector(".filter_child p").innerHTML = categoryFormURL;
+      applyFilter();
+    } else {
+      renderPage(currentPage);
+      setupPagination();
+    }
   } catch (err) {
     console.log("Error: ", err);
   }

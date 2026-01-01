@@ -37,12 +37,12 @@ export const navBar = () => {
                         <li class="dropdown"><a href="../HTML/Menu.html" class="nav_link">MENU </a><i
                                 class="fa fa-angle-down"></i>
                             <ul class="dropdown_menu">
-                                <li>VEG</li>
-                                <li>NON-VEG</li>
+                                <li> <a href="../HTML/Menu.html?category=Veg">VEG</a></li>
+                                <li> <a href="../HTML/Menu.html?category=Non-Veg">NON-VEG</a></li>
                             </ul>
                         </li>
                         <li><a href="../HTML/About.html" class="nav_link">ABOUT US</a></li>
-                        <li class="nav_link">CONTACT</li>
+                        <li> <a href="../index.html#contact" class="nav_link">CONTACT</a></li>
                     </ul>
                 </div>
                 <div class="nav_button">
@@ -61,12 +61,12 @@ export const navBar = () => {
                 <li class="dropdown_none"><a href="../HTML/Menu.html">MENU </a> <i
                         class="fa fa-angle-down"></i>
                     <ul class="dropdown_menu_none">
-                        <li>VEG</li>
-                        <li>NON-VEG</li>
+                        <li><a href="../HTML/Menu.html?category=Veg">VEG</a></li>
+                        <li><a href="../HTML/Menu.html?category=Non-Veg">NON-VEG</a></li>
                     </ul>
                 </li>
                 <li><a href="../HTML/About.html">ABOUT US</a></li>
-                <li>CONTACT</li>
+                <li> <a href="./index.html#contact" class="nav_link">CONTACT</a></li>
             </ul>
         </div>
     `;
@@ -216,6 +216,11 @@ color: #fff;
 .menu_img1,
 .list_nav_none {
   display: none;
+}
+
+li.active_page > i {
+  color: var(--golden);
+  text-shadow: 0 0 8px var(--golden);
 }
 
 .list_nav ul,
@@ -981,14 +986,17 @@ export const setActive = () => {
 
   document.querySelectorAll(".nav_link").forEach((link) => {
     const linkPath = link.getAttribute("href").split("/").pop();
+    const parentli = link.closest("li");
 
     if (
       linkPath === currentPath ||
       (currentPath === "") & (linkPath === "index.html")
     ) {
       link.classList.add("active");
+      parentli.classList.add("active_page");
     } else {
       link.classList.remove("active");
+      parentli.classList.remove("active_page");
     }
   });
 };
