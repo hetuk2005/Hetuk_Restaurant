@@ -445,3 +445,51 @@ nav {
     background-position: -100% 0;
   }
 }
+
+@media (max-width: 430px) {
+  .hero {
+    background-position: center;
+  }
+  .hero h3,
+  .hero h5 {
+    bottom: 51%;
+    left: 3%;
+    font-size: x-large;
+  }
+  .hero h5 {
+    bottom: 39%;
+    text-align: center;
+  }
+  .separator {
+    width: 50%;
+    bottom: 27%;
+    left: 26%;
+  }
+  .button_menu {
+    justify-content: left;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    margin: 0 15px;
+  }
+  .button_menu button {
+    font-size: 13px;
+    width: 200px;
+  }
+  .menu h3 {
+    padding: 31px 15px;
+    font-size: 25px;
+  }
+  .menu_items {
+    display: flex !important;
+    flex-direction: column;
+    padding: 31px 21px;
+    width: 100%;
+  }
+  .pagination {
+    gap: 21px;
+    margin: 0 15px;
+  }
+  .page_number {
+    font-size: 13px;
+  }
+}
