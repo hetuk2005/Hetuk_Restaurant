@@ -57,15 +57,15 @@ export const navBar = () => {
             <button class="close_btn">&times;</button>
             <img src="../Utilies/Logo.svg" alt="Logo">
             <ul>
-                <li><a href="../index.html">HOME</a></li>
-                <li class="dropdown_none"><a href="../HTML/Menu.html">MENU </a> <i
+                <li><a href="../index.html" class="nav_link">HOME</a></li>
+                <li class="dropdown_none"><a href="../HTML/Menu.html" class="nav_link">MENU </a> <i
                         class="fa fa-angle-down"></i>
                     <ul class="dropdown_menu_none">
                         <li><a href="../HTML/Menu.html?category=Veg">VEG</a></li>
                         <li><a href="../HTML/Menu.html?category=Non-Veg">NON-VEG</a></li>
                     </ul>
                 </li>
-                <li><a href="../HTML/About.html">ABOUT US</a></li>
+                <li><a href="../HTML/About.html" class="nav_link">ABOUT US</a></li>
                 <li> <a href="./index.html#contact" class="nav_link">CONTACT</a></li>
             </ul>
         </div>

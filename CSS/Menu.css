@@ -457,13 +457,24 @@ nav {
     font-size: x-large;
   }
   .hero h5 {
-    bottom: 39%;
+    bottom: 37%;
     text-align: center;
   }
   .separator {
     width: 50%;
-    bottom: 27%;
+    bottom: 29%;
     left: 26%;
+  }
+  .filter {
+    position: relative;
+    z-index: 21;
+  }
+  .filter_child.active {
+    margin-bottom: 170px;
+  }
+  .filter_child ul {
+    top: calc(100%+11px);
+    /* left: 0; */
   }
   .button_menu {
     justify-content: left;
@@ -491,5 +502,28 @@ nav {
   }
   .page_number {
     font-size: 13px;
+  }
+  .loading_menu {
+    display: flex;
+    flex-direction: column;
+    padding: 31px 21px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 430px) {
+  .hero h3,
+  .hero h5 {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    left: 0;
+  }
+  .hero h5 {
+    bottom: 42%;
+  }
+  .separator {
+    bottom: 33%;
+    left: 25%;
   }
 }
