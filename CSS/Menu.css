@@ -237,20 +237,6 @@ nav {
   color: #000;
 }
 
-.button_menu button:hover,
-.prev:hover,
-.next:hover {
-  color: var(--golden);
-  box-shadow: 0 0 15px var(--golden), 0 0 15px var(--golden),
-    0 0 15px var(--golden), 0 0 15px var(--golden), 0 0 15px var(--golden);
-  transform: scale(1.1);
-}
-
-.button_menu button:hover {
-  background-color: transparent;
-  border: 2px solid #000;
-}
-
 .menu h3 {
   color: var(--golden);
   text-align: center;
@@ -504,8 +490,7 @@ nav {
     font-size: 13px;
   }
   .loading_menu {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: repeat(1, 1fr);
     padding: 31px 21px;
     width: 100%;
   }
@@ -525,5 +510,20 @@ nav {
   .separator {
     bottom: 33%;
     left: 25%;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button_menu button:hover,
+  .prev:hover,
+  .next:hover {
+    color: var(--golden);
+    box-shadow: 0 0 15px var(--golden), 0 0 15px var(--golden),
+      0 0 15px var(--golden), 0 0 15px var(--golden), 0 0 15px var(--golden);
+    transform: scale(1.1);
+  }
+  .button_menu button:hover {
+    background-color: transparent;
+    border: 2px solid #000;
   }
 }
