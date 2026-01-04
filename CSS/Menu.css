@@ -527,3 +527,24 @@ nav {
     left: 25%;
   }
 }
+
+@media (min-width: 431px) and (max-width: 840px) {
+  .hero h3 {
+    left: 11%;
+    bottom: 46%;
+    text-align: center;
+  }
+  .hero h5 {
+    text-align: center;
+    left: 12%;
+    bottom: 37%;
+  }
+  .separator {
+    width: 31%;
+    left: 36%;
+    bottom: 28%;
+  }
+  .menu_items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
