@@ -28,7 +28,9 @@ export const navBar = () => {
             </div>
             <div class="nav_parent2">
                 <div class="logo_child">
+                <a href="../index.html">
                     <img src="../Utilies/Logo.svg" alt="Logo" class="logo_img">
+                </a>
                     <img src="../Utilies/Menu.svg" alt="Menu" class="menu_img">
                   </div>
                 <div class="list_nav">
@@ -45,17 +47,21 @@ export const navBar = () => {
                         <li> <a href="../index.html#contact" class="nav_link">CONTACT</a></li>
                     </ul>
                 </div>
+                <a href="./index.html#reservation_child1">
                 <div class="nav_button">
                     <button class="default">
                         FIND A TABLE
                     </button>
+                    </a>
                     <img src="../Utilies/Menu.svg" alt="Menu" class="menu_img1">
                 </div>
             </div>
         </nav>
         <div class="list_nav_none">
             <button class="close_btn">&times;</button>
-            <img src="../Utilies/Logo.svg" alt="Logo">
+                <a href="../index.html">
+                    <img src="../Utilies/Logo.svg" alt="Logo" class="logo_img">
+                </a>
             <ul>
                 <li><a href="../index.html" class="nav_link">HOME</a></li>
                 <li class="dropdown_none"><a href="../HTML/Menu.html" class="nav_link">MENU </a> <i
@@ -206,7 +212,7 @@ color: #fff;
 }
 
 .logo_img,
-.list_nav_none > img {
+.list_nav_none > a > img {
   width: 165px;
   height: 50px;
   object-fit: cover;
@@ -319,7 +325,7 @@ li.active_page > i {
   border: 2px solid #f0f0f0;
 }
 
-.nav_button > button,.footer_sub button {
+.default,.footer_sub button {
   padding: 15px 45px;
   background-color: var(--golden);
   border: 2px solid var(--golden);
@@ -331,7 +337,7 @@ li.active_page > i {
   z-index: 1;
 }
 
-.nav_button > button::after,.footer_sub button::after {
+.default::after,.footer_sub button::after {
   content: "";
   position: absolute;
   height: 0;
@@ -345,12 +351,12 @@ li.active_page > i {
   border-bottom-right-radius: 50%;
 }
 
-.nav_button > button:hover::after,.footer_sub button:hover::after {
+.default:hover::after,.footer_sub button:hover::after {
   height: 100%;
   border-radius: 0;
 }
 
-.nav_button > button:hover,.footer_sub button:hover {
+.default:hover,.footer_sub button:hover {
   color: #fff;
 }
 
@@ -592,7 +598,7 @@ html {
     border-radius: 50%;
     border: 2px solid #fff;
   }
-  .list_nav_none > img {
+  .list_nav_none > a > img {
     margin: 15px auto;
     display: block;
   }
