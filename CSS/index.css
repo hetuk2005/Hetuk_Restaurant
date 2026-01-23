@@ -48,6 +48,19 @@
  z-index: 21;
    } */
 
+/* Scroll Indicator */
+
+.scroll_indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 0%;
+  z-index: 31;
+  background: linear-gradient(91deg, #d4af37, #fff3b0);
+  transition: width 0.3s ease-in-out;
+}
+
 /* Pre-Loader */
 
 #loader {
