@@ -48,6 +48,36 @@
  z-index: 21;
    } */
 
+/* Internet Status */
+
+.internet {
+  position: fixed;
+  bottom: 21px;
+  left: 45%;
+  padding: 15px;
+  border-radius: 25px;
+  font-size: 17px;
+  font-weight: bolder;
+  background: var(--golden);
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 31;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.internet:hover {
+  background: #000;
+}
+
+.internet.Online {
+  color: #1e8e3e;
+}
+
+.internet.Offline {
+  color: #c62828;
+}
+
 /* Scroll Indicator */
 
 .scroll_indicator {
@@ -58,7 +88,7 @@
   width: 0%;
   z-index: 31;
   background: linear-gradient(91deg, #d4af37, #fff3b0);
-  transition: width 0.3s ease-in-out;
+  transition: width 0.15s ease-in-out;
 }
 
 /* Pre-Loader */
