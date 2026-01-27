@@ -1070,8 +1070,8 @@ export const internetStatus = () => {
 };
 
 // Detect changes in real time
-window.addEventListener("Online", checkInternet);
-window.addEventListener("Offline", checkInternet);
+window.addEventListener("online", checkInternet);
+window.addEventListener("offline", checkInternet);
 
 // Highlight Navbar
 
