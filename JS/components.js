@@ -1067,11 +1067,11 @@ export const internetStatus = () => {
   checkInternet();
 
   setInterval(checkInternet, 1000);
-};
 
-// Detect changes in real time
-window.addEventListener("online", checkInternet);
-window.addEventListener("offline", checkInternet);
+  // Detect changes in real time
+  window.addEventListener("online", checkInternet);
+  window.addEventListener("offline", checkInternet);
+};
 
 // Highlight Navbar
 
