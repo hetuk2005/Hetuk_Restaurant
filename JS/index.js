@@ -125,40 +125,4 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// Scroll Indicator
-const progressBar = document.querySelector(".scroll_indicator");
-
-window.addEventListener("scroll", () => {
-  const scrollTop = window.scrollY;
-  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-  const scrollPercent = (scrollTop / docHeight) * 100;
-  progressBar.style.width = scrollPercent + "%";
-});
-
-// Internet Status
-const statusBox = document.querySelector("#internet");
-
-async function checkInternet() {
-  try {
-    await fetch("https://jsonplaceholder.typicode.com/posts/1", {
-      cache: "no-store",
-    });
-    statusBox.innerHTML = "You Are Online ✅";
-    statusBox.classList.remove("Offline");
-    statusBox.classList.add("Online");
-  } catch {
-    statusBox.innerHTML = "You Are Offline ❌";
-    statusBox.classList.remove("Online");
-    statusBox.classList.add("Offline");
-  }
-}
-
-checkInternet();
-
-setInterval(checkInternet, 1000);
-
-// Detect changes in real time
-window.addEventListener("Online", updateStatus);
-window.addEventListener("Offline", updateStatus);
-
 apiCall();
