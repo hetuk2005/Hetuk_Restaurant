@@ -988,26 +988,46 @@ footer {
 // Highlight Navbar
 
 export const setActive = () => {
-  const currentPath = window.location.pathname.split("/").pop();
+  // const currentPath = window.location.pathname.split("/").pop();
+
+  // document.querySelectorAll(".nav_link").forEach((link) => {
+  //   const linkPath = link.getAttribute("href").split("/").pop();
+  //   const parentli = link.closest("li");
+
+  //   if (
+  //     linkPath === currentPath ||
+  //     (currentPath === "") & (linkPath === "index.html")
+  //   ) {
+  //     link.classList.add("active");
+  //     parentli.classList.add("active_page");
+  //   } else {
+  //     link.classList.remove("active");
+  //     parentli.classList.remove("active_page");
+  //   }
+  // });
+
+  let currentPath = window.location.pathname;
+
+  if (currentPath === "/" || currentPath === "") {
+    currentPath = "index.html";
+  } else {
+    currentPath = currentPath.split("/").pop();
+  }
 
   document.querySelectorAll(".nav_link").forEach((link) => {
-    const linkPath = link.getAttribute("href").split("/").pop();
-    const parentli = link.closest("li");
+    const linkPath = link.getAttribute("href").split("/").pop().split("#")[0];
 
-    if (
-      linkPath === currentPath ||
-      (currentPath === "") & (linkPath === "index.html")
-    ) {
+    const parentLink = link.closest("li");
+
+    if (linkPath === currentPath) {
       link.classList.add("active");
-      parentli.classList.add("active_page");
+      parentLink?.classList.add("activePage");
     } else {
       link.classList.remove("active");
-      parentli.classList.remove("active_page");
+      parentLink?.classList.remove("activePage");
     }
   });
 };
-
-setActive();
 
 /*Navbar Media Query Styling */
 
