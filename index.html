@@ -519,13 +519,13 @@
     </body>
     <script src="./JS/index.js"></script>
     <script type="module">
-        import {navBar,footerBar,navStyle,footerStyle,setActive} from "./JS/Components.js";
+        import {navBar,footerBar,navStyle,footerStyle,setActive,featureStyle} from "./JS/Components.js";
 
         document.querySelector("nav").innerHTML=navBar();
         document.querySelector("footer").innerHTML=footerBar();
 
         let styleTag=document.createElement("style");
-        styleTag.textContent=navStyle() + footerStyle();
+        styleTag.textContent=navStyle() + footerStyle()+featureStyle();
         document.head.append(styleTag);
 
         setActive();

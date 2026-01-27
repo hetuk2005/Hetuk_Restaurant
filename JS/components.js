@@ -985,27 +985,56 @@ footer {
 `;
 };
 
+export const featureStyle = () => {
+  return `
+/* Internet Status */
+
+.internet {
+  position: fixed;
+  bottom: 21px;
+  left: 45%;
+  padding: 15px;
+  border-radius: 25px;
+  font-size: 17px;
+  font-weight: bolder;
+  background: var(--golden);
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 31;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.internet:hover {
+  background: #000;
+}
+
+.internet.Online {
+  color: #1e8e3e;
+}
+
+.internet.Offline {
+  color: #c62828;
+}
+
+/* Scroll Indicator */
+
+.scroll_indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 0%;
+  z-index: 31;
+  background: linear-gradient(91deg, #d4af37, #fff3b0);
+  transition: width 0.15s ease-in-out;
+}
+  `;
+};
+
 // Highlight Navbar
 
 export const setActive = () => {
-  // const currentPath = window.location.pathname.split("/").pop();
-
-  // document.querySelectorAll(".nav_link").forEach((link) => {
-  //   const linkPath = link.getAttribute("href").split("/").pop();
-  //   const parentli = link.closest("li");
-
-  //   if (
-  //     linkPath === currentPath ||
-  //     (currentPath === "") & (linkPath === "index.html")
-  //   ) {
-  //     link.classList.add("active");
-  //     parentli.classList.add("active_page");
-  //   } else {
-  //     link.classList.remove("active");
-  //     parentli.classList.remove("active_page");
-  //   }
-  // });
-
   let currentPath = window.location.pathname.toLowerCase();
 
   document.querySelectorAll(".nav_link").forEach((link) => {

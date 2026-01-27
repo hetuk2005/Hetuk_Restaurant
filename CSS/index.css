@@ -9,87 +9,10 @@
   font-family: "Times New Roman", Times, serif;
 }
 
-@keyframes appear {
-  from {
-    opacity: 0;
-    scale: 0.5;
-  }
-  to {
-    opacity: 1;
-    scale: 1;
-  }
-}
-
-.about_content,
-.about_banner,
-.pav_bhaji,
-.dish_about,
-.delicious_div,
-.delicious_menu h2,
-.delicious_title,
-.separator,
-.reg_container,
-.reservation_child1,
-.reservation_child2,
-.strength h2,
-.card,
-.card_parent,
-.event h2,
-.event_parent,
-.event_card,
-.event button {
-  animation: appear linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 41%;
-}
-
 /* .nav_parent{
    display
  z-index: 21;
    } */
-
-/* Internet Status */
-
-.internet {
-  position: fixed;
-  bottom: 21px;
-  left: 45%;
-  padding: 15px;
-  border-radius: 25px;
-  font-size: 17px;
-  font-weight: bolder;
-  background: var(--golden);
-  color: #fff;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  z-index: 31;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-}
-
-.internet:hover {
-  background: #000;
-}
-
-.internet.Online {
-  color: #1e8e3e;
-}
-
-.internet.Offline {
-  color: #c62828;
-}
-
-/* Scroll Indicator */
-
-.scroll_indicator {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 5px;
-  width: 0%;
-  z-index: 31;
-  background: linear-gradient(91deg, #d4af37, #fff3b0);
-  transition: width 0.15s ease-in-out;
-}
 
 /* Pre-Loader */
 
