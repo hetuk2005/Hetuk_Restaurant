@@ -1006,20 +1006,16 @@ export const setActive = () => {
   //   }
   // });
 
-  let currentPath = window.location.pathname;
-
-  if (currentPath === "/" || currentPath === "") {
-    currentPath = "index.html";
-  } else {
-    currentPath = currentPath.split("/").pop();
-  }
+  let currentPath = window.location.pathname.toLowerCase();
 
   document.querySelectorAll(".nav_link").forEach((link) => {
-    const linkPath = link.getAttribute("href").split("/").pop().split("#")[0];
-
+    const href = link.getAttribute("href").toLowerCase();
     const parentLink = link.closest("li");
 
-    if (linkPath === currentPath) {
+    if (
+      (currentPath === "/" && href.includes("index.html")) ||
+      (currentPath !== "/" && currentPath.includes(href.replace("../", "")))
+    ) {
       link.classList.add("active");
       parentLink?.classList.add("activePage");
     } else {
