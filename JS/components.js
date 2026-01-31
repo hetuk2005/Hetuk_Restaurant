@@ -1029,6 +1029,14 @@ export const featureStyle = () => {
   background: linear-gradient(91deg, #d4af37, #fff3b0);
   transition: width 0.15s ease-in-out;
 }
+
+
+@media (max-width: 430px){
+  .internet{
+    left: 15%;
+    bottom: 15px;
+  }
+}
   `;
 };
 
